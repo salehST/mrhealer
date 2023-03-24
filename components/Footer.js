@@ -62,7 +62,7 @@ const Footer = () => {
                                     data-te-ripple-color="light">
 
                                     <span className="flex relative">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BD05A2] opacity-75"></span><Image height={20} width={20} className=" h-5 w-5" src="/img/social/facebook.svg" alt="" /> </span><a href="#" className=" ml-2">Facebook</a>
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BD05A2] opacity-75"></span><Image height={20} width={20} className=" h-5 w-5" src="/img/social/facebook.svg" alt="" /> </span><a href="https://www.facebook.com/MrHealerHS" target="_blank" className=" ml-2">Facebook</a>
 
                                 </li>
                                 <li className="mb-4  flex" data-te-ripple-init

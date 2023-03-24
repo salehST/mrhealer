@@ -113,7 +113,7 @@ const OfferTab = () => {
                         >
                         </li>
                     </ul>
-                    <div className="tab-content-area p-4 md:p-8 h-full w-full shadow-lg shadow-[rgba(91,0,91,0.10)] rounded">
+                    <div className="tab-content-area  border border-gray-100 p-4 md:p-8 h-full w-full shadow-lg shadow-[rgba(91,0,91,0.10)] rounded">
                         <div
                         className="hidden tab-content opacity-0 opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
                         id="tabs-01"

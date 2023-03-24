@@ -239,20 +239,20 @@ const CustomerSupport = () => {
     </defs>
                 </svg>
             </div>
-            <div className="flex flex-col md:flex-row gap-8">
-                <div className="support-info w-full md:w-1/2">
+            <div className="flex flex-col items-start justify-start gap-8">
+                <div className="support-info w-full">
                     <div className="inner-texts">
                     <h4 className='text-[#B64EC3] text-2xl font-medium mb-6'>
                     How Does It Work ?</h4>
-                    <p className="text-black text-base font-normal leading-7">Signing up for our app provides easy access to a wide range of healthcare options. Simply use the service's search tools to choose a doctor who fits your needs, then pay as you go for an on-demand consultation (Instant Live Doctor or Scheduled Online Specialist). The doctor will call you via Mr. Healer app on time. The next step is to retrieve your doctor's submitted prescription and then to acquire the necessary treatment or diagnostics. Maintain regular doctor visits and take all prescribed medications until you feel well. You can also take an appointment and consult with the doctor in his offline chamber (Available for Selected Doctors). You have 24/7 access to a variety of medical services, such as booking a pathology test or medicine home delivery.</p>
+                    <p className="text-black text-base font-normal leading-7 text-justify">Signing up for our app provides easy access to a wide range of healthcare options. Simply use the service's search tools to choose a doctor who fits your needs, then pay as you go for an on-demand consultation (Instant Live Doctor or Scheduled Online Specialist). The doctor will call you via Mr. Healer app on time. The next step is to retrieve your doctor's submitted prescription and then to acquire the necessary treatment or diagnostics. Maintain regular doctor visits and take all prescribed medications until you feel well. You can also take an appointment and consult with the doctor in his offline chamber (Available for Selected Doctors). You have 24/7 access to a variety of medical services, such as booking a pathology test or medicine home delivery.</p>
                     </div>
                     <div className="inner-texts">
                     <h5 className='text-[#B64EC3] text-xl font-medium mt-8 mb-4'>
                     How to Contact Customer Care ?</h5>
-                    <p className='text-black text-base font-normal leading-7'>You can contact us via our hotline number provided in the contact information section for any query or complaint. You can also reach us through our Facebook page or directly calling through our app or through email.</p>
+                    <p className='text-black text-base font-normal leading-7 text-justify'>You can contact us via our hotline number provided in the contact information section for any query or complaint. You can also reach us through our Facebook page or directly calling through our app or through email.</p>
                     </div>
                 </div>
-                <div className="flex items-center justify-center w-full md:w-1/2">
+                <div className="flex items-start justify-start w-full mt-8">
                     <div className="play-btn flex items-center justify-center relative z-[1]">
                         <a href="" className='underline text-black hover:text-gray-900 transition-colors  flex items-center justify-center'>Watch The Video <Image width={110} height={110} src="/img/play-btn.svg" className=' ml-4' alt="icon" /></a> 
                     </div>

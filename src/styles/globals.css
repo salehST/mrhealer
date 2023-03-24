@@ -177,13 +177,14 @@ section:hover .section-title h3:after {
 .tab-content-area .inner-content {
     position: relative;
     z-index: 1;
+    height: 100%;
 }
 
 .tab-content-area .inner-content:after {
     content: "";
     position: absolute;
-    width: 250px;
-    height: 220px;
+    width: 100%;
+    height: 355px;
     bottom: 0;
     right: 0;
     z-index: -1;
@@ -191,59 +192,59 @@ section:hover .section-title h3:after {
 }
 #tabs-01 .inner-content:after {
     background: url('/img/tab/01.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: center;
+    background-position: bottom right;
 }
 #tabs-02 .inner-content:after {
     background: url('/img/tab/02.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 #tabs-03 .inner-content:after {
     background: url('/img/tab/03.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 #tabs-04 .inner-content:after {
     background: url('/img/tab/04.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 #tabs-05 .inner-content:after {
     background: url('/img/tab/05.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 #tabs-06 .inner-content:after {
     background: url('/img/tab/06.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 #tabs-07 .inner-content:after {
     background: url('/img/tab/07.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 #tabs-08 .inner-content:after {
     background: url('/img/tab/08.svg');
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
-    background-position: top center;
+    background-position: bottom right;
 }
 h4.tab-title{
     position: relative;max-width: 400px;
@@ -265,6 +266,13 @@ h4.tab-title:after {
 .inner-content img {
     filter: drop-shadow(5px 4px 2px #B64EC335);
     -webkit-filter: drop-shadow(5px 4px 2px #B64EC335);
+}
+.tab-content-area {
+    min-height: 735px;
+}
+
+.tab-content-area > div {
+    height: 670px;
 }
 /* tab end */
 /* swiper start */
@@ -510,5 +518,12 @@ section:hover .section-title.center-title h3:after {
     .department-carousel {
         padding-top: 60px;
         padding-bottom: 80px;
+    }
+    .tab-content-area {
+        min-height: unset;
+    }
+    
+    .tab-content-area > div {
+        height: unset;
     }
 }

@@ -26,7 +26,7 @@ export default function Departments(){
             <div className="section-title center-title text-center mb-8">
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>all departments</h3>
             </div>
-            <div className="grid gid-cols-1 grid-cols-2 gap-7">
+            <div className="grid gid-cols-1 md:grid-cols-2 gap-7">
             { allData.map((el, index) => {
                         const {dept_id, dept_name, image, dept_desc} = el
                         return  ( 

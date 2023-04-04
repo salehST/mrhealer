@@ -34,12 +34,10 @@ export default function Departments(){
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>all departments</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
-            { allData.map((el) => {
+            { allData.map((el, index) => {
                         const {dept_id, dept_name, image, dept_desc} = el
                         return  ( 
-                        <>
-                        <DepartmentsApi key={el.id} dept_id={dept_id} dept_name={dept_name} image={image} dept_desc={dept_desc} />
-                    	</>
+                        <DepartmentsApi key={index} dept_id={dept_id} dept_name={dept_name} image={image} dept_desc={dept_desc} />
                        )
                       })  
              }

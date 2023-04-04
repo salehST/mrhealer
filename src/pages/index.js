@@ -80,7 +80,7 @@ export default function Home() {
         <Faq />
       </main>
 
-      <script src={"/js/main.js"}></script>
+      <script src={"/js/main.js"} async ></script>
     </>
   );
 }

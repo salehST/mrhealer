@@ -8,9 +8,9 @@ import uniqid from 'uniqid'
 let id = uniqid();
 
 export default function Departments(){
-  const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
   const [myData, setData] = useState([]);
   useEffect(() => {
+    const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
       Axios.get(`${apiUrl}/admin/department/all`).then((res) =>{
           setData(res.data);
       }).catch((err) => {

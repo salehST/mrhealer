@@ -22,8 +22,8 @@ const DoctorProfile = () => {
     const [myDataC, setDataC] = useState(null);
     const [myDataD, setDataD] = useState(null);
   
-    const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
     useEffect(() => {
+      const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
       if (doc) {
         axiosInstance
           .get(`${apiUrl}/profile/doctor/${doc}/info`)

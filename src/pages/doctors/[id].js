@@ -9,7 +9,6 @@ const AvailableDoctors = () => {
 //   const { query } = useRouter();
 //   const { id } = query;
 //   let drId = id;
-const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
 const router  = useRouter();
 const { id }  = router.query;
 // let { id } = useParams();
@@ -18,6 +17,7 @@ const { id }  = router.query;
     // console.log("query", query)
     const [myData, setData] = useState([]);
     useEffect(() => {
+      const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
         id && Axios.get(`${apiUrl}/profile/doctor/all?dept_id=${id}`).then((res) =>{
             setData(res.data);
         }).catch((err) => {

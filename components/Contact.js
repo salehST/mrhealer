@@ -3,7 +3,7 @@ import React from 'react'
 const Contact = () => {
   return (
     
-    <section id='contact' className="w-full p-4 md:py-20 contact-us">
+    <section id='contact' className="w-full contact-us p-4 md:py-20 bg-pattern">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
             <div className="section-title mb-8">
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold w-auto'>Contact Information</h3>

@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 const OfferTab = () => {
   return (
-    <section className="w-full bg-white p-4 md:py-20">
+    <section className="w-full bg-white p-4 pt-0 pb-0 md:pt-14 md:pb-10">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
-            <div className="section-title mb-8">
+            <div data-aos="fade-up" className="section-title mb-8">
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold w-auto'>What we offer</h3>
             </div>
-            <div className="tab-area">
+            <div  data-aos="fade-up" data-aos-delay="400" className="tab-area">
                 <div className="flex flex-col items-stretch gap-5 md:flex-row md:items-start">
                     <ul
                         className="flex list-none flex-col flex-wrap pl-0"

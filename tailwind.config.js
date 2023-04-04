@@ -13,7 +13,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "var(--primary)",
-      }
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)"]
+      },      
+      safelist: ['animate-[fade-in_1s_ease-in-out]', 'animate-[fade-in-down_1s_ease-in-out]'],
     },
   },
   plugins: [require("tw-elements/dist/plugin")],

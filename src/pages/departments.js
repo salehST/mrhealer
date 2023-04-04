@@ -2,15 +2,22 @@
 import Axios from "axios";
 import React, { useState, useEffect } from "react";
 import Head from "next/head";
-import Image from "next/image";
+import DepartmentsApi from "../../components/DepartmentsApi";
+import uniqid from 'uniqid'
+
+let id = uniqid();
 
 export default function Departments(){
+  const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
   const [myData, setData] = useState([]);
   useEffect(() => {
-      Axios.get('https://mrhealerbd.com/api/v1/admin/department/all').then((res) =>{
+      Axios.get(`${apiUrl}/admin/department/all`).then((res) =>{
           setData(res.data);
+      }).catch((err) => {
+        console.log(err);
       }); 
   },[]);
+  // console.log(myData)
   const objData = Object.entries(myData);
   let allData = []
   for (let value of Object.values(objData)) {
@@ -21,32 +28,18 @@ export default function Departments(){
     <Head>
       <title>Departments</title>
     </Head>
-    <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-12 departments strip-top">
+    <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-12 departments bg-pattern">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
             <div className="section-title center-title text-center mb-8">
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>all departments</h3>
             </div>
-            <div className="grid gid-cols-1 md:grid-cols-2 gap-7">
-            { allData.map((el, index) => {
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-7">
+            { allData.map((el) => {
                         const {dept_id, dept_name, image, dept_desc} = el
                         return  ( 
-                          <>
-                          <a href="https://play.google.com/store/apps/details?id=com.healer.patient" target={"_blank"}>
-                    <div key={index} id={dept_id} className="single-department bg-white p-6 rounded-md shadow-md hover:shadow-lg">
-                      <div className="inner-info flex gap-4 items-center justify-start">
-                          <Image lazy src={`https://healerspc.sgp1.digitaloceanspaces.com/media/departments/${image}`} alt="icon" width={150} height={150} className="h-36 w-36" />
-                          <div className="d-detail">
-                            <h3 className="title text-xl text-primary font-semibold pb-2">
-                                {dept_name}
-                            </h3>
-                            <p className="text-sm text-black font-normal">
-                                {dept_desc}
-                            </p>
-                          </div>
-                      </div>
-                    </div>
-                    </a>
-                    </>
+                        <>
+                        <DepartmentsApi key={el.id} dept_id={dept_id} dept_name={dept_name} image={image} dept_desc={dept_desc} />
+                    	</>
                        )
                       })  
              }
@@ -57,13 +50,3 @@ export default function Departments(){
   )
 
 }
-
-// import React from 'react'
-
-// const Departments = () => {
-//   return (
-//     <div>departments</div>
-//   )
-// }
-
-// export default Departments

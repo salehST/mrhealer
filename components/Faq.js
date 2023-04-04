@@ -5,11 +5,11 @@ const Faq = () => {
   return (
     <section className="w-full bg-white p-4 md:py-20 faq">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
-            <div className="section-title center-title text-center mb-8">
+            <div data-aos="fade-up" className="section-title center-title text-center mb-8">
                 <h3 className='text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>FAQ's</h3>
             </div>
             <div id="accordion" className='mx-auto w-full md:w-8/12'>
-                <div
+                <div data-aos="fade-up-right" data-aos-delay="200"
                     className="">
                     <h4 className="mb-3" id="headingOne">
                     <button
@@ -49,7 +49,7 @@ const Faq = () => {
                     </div>
                     </div>
                 </div>
-                <div
+                <div  data-aos="fade-up-left" data-aos-delay="200"
                     className="">
                     <h4 className="mb-3" id="headingTwo">
                     <button

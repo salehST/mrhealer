@@ -5,7 +5,7 @@ const TestMedicine = () => {
     <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-12 department-carousel strip-top b-strip">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
             <div className="section-title center-title text-center mb-8">
-                <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>Test and Medicine</h3>
+                <h3 data-aos="fade-up" className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>Test and Medicine</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="info-area rounded-lg bg-white shadow-md hover:shadow-lg transition px-6 py-10">

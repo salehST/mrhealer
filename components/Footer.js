@@ -4,7 +4,8 @@ import Link from 'next/link'
 
 const Footer = () => {
     return (
-        <footer className="p-4 md:py-12 bg-white sm:p-6">
+        <>
+        <footer className="p-4 md:py-12 bg-white sm:p-6 font-poppins">
             <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
                 <div className="footer-logo flex gap-6 flex-col md:flex-row justify-between items-center md:items-center">
                 <Image
@@ -28,7 +29,7 @@ const Footer = () => {
                                     <a href="#" className="">About Us</a>
                                 </li>
                                 <li className="mb-4">
-                                    <a href="#" className="">Departments</a>
+                                    <Link href={"/departments"} className="">Departments</Link>
                                 </li>
                                 <li className="mb-4">
                                     <Link href="/faq" className="">FAQ</Link>
@@ -42,7 +43,7 @@ const Footer = () => {
                             <h2 className="mb-6 text-base font-semibold text-[#2B313B] ">Useful Links</h2>
                             <ul className="text-xs font-normal leading-5 text-[#6C7A93]">
                                 <li className="mb-4">
-                                    <a href="#" className=" ">Privacy Policy</a>
+                                    <Link href={"/privacy-policy"} className=" ">Privacy Policy</Link>
                                 </li>
                                 <li className="mb-4">
                                     <a href="#" className="">Terms & Conditions</a>
@@ -62,7 +63,7 @@ const Footer = () => {
                                     data-te-ripple-color="light">
 
                                     <span className="flex relative">
-                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BD05A2] opacity-75"></span><Image height={20} width={20} className=" h-5 w-5" src="/img/social/facebook.svg" alt="" /> </span><a href="https://www.facebook.com/MrHealerHS" target="_blank" className=" ml-2">Facebook</a>
+                                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BD05A2] opacity-75"></span><Image height={20} width={20} className=" h-5 w-5" src="/img/social/facebook.svg" alt="" /> </span><a href="#" className=" ml-2">Facebook</a>
 
                                 </li>
                                 <li className="mb-4  flex" data-te-ripple-init
@@ -100,13 +101,22 @@ const Footer = () => {
                     </div>
                 </div>
                 <hr
-  class="mb-4 md:my-10 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
+  className="mb-4 md:my-10 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
             <div className="flex items-center justify-center sm:justify-start py-4">
                 <span className=" font-normal text-[#2B313B] sm:text-center">© 2023 MrHeal All rights reserved
                 </span>
             </div>
         </div>
     </footer >
+
+        <div className="progress-bar" />
+    <button className="back-to-top hide">
+      <svg xmlns="http://www.w3.org/2000/svg" className="back-to-top-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 11l5-5m0 0l5 5m-5-5v12" />
+      </svg>
+    </button>
+    <div className="progress-bar" />
+    </>
 
   )
 }

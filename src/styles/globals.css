@@ -141,12 +141,13 @@ section:hover .section-title h3:after {
     position: absolute;
     top: 0;
     left: 0;
-    background: url(/img/pattern-bg-01.svg);
-    background-position: bottom right;
+    background: url(/img/pattern-bg-01.2.svg), url(/img/pattern-bg-01.3.svg);
+    background-position: 100% 50%, 0% 90%;
     background-repeat: no-repeat;
-    opacity: 0.15;
+    opacity: 0.10;
     z-index: -1;
-    background-size: 75%;
+    background-size: 50%;
+    background-attachment: fixed;
 }
 .b-strip{
     position: relative;
@@ -269,10 +270,24 @@ h4.tab-title:after {
 }
 .tab-content-area {
     min-height: 735px;
+    position: relative;
 }
 
 .tab-content-area > div {
     height: 670px;
+}
+.tab-content-area:before {
+    content: "";
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: url(/img/pattern-bg-01.2.svg);
+    opacity: 0.10;
+    background-position: 100% 30%;
+    background-repeat: no-repeat;
+    background-size: 60%;
 }
 /* tab end */
 /* swiper start */
@@ -423,6 +438,9 @@ section:hover .section-title.center-title h3:after {
 .arrow-btn:hover svg {
     animation: arrow-r 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
+.arrow-btn-back:hover svg {
+    animation: arrow-l 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
 @keyframes arrow-r{
     0% { 
         left: 8px;
@@ -432,6 +450,17 @@ section:hover .section-title.center-title h3:after {
     }
     100% {
         left: 8px;
+    }
+}  
+@keyframes arrow-l{
+    0% { 
+        right: 8px;
+    }
+    50% {
+        right: 13px;
+    }
+    100% {
+        right: 8px;
     }
 }  
 /* contact */
@@ -498,6 +527,99 @@ section:hover .section-title.center-title h3:after {
     display: inline-block;
     text-align: center;
 }
+/* doctor profile */
+.doc-title {
+    position: relative;
+    padding-bottom: 5px;
+    margin-bottom: 8px;
+}
+
+.doc-title:after {
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: var(--primary);
+    border-radius: 6px;
+}
+.doc-r {
+    border-left: 1px solid rgb(182 78 195 / 75%);
+    padding-left: 30px;
+}
+/* doctor profile end */
+/* go to top start */
+
+.back-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border-radius: 100%;
+    background: var(--primary);
+    padding: 0.5rem;
+    border: none;
+    cursor: pointer;
+    opacity: 100%;
+    transition: opacity 0.5s;
+  }
+  
+  .back-to-top:hover {
+    opacity: 60%;
+  }
+  
+  .hide{
+    opacity: 0%;
+  }
+  
+  .back-to-top-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #ffffff;
+  }
+  
+  .progress-bar {
+    height: 2px;
+    background: rgb(182 78 195 / 50%);
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+/* go to top end */
+
+.edu-info-inner {
+    position: relative;
+    padding-left: 50px;
+}
+
+.edu-info-inner:before {
+    content: "";
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    left: 12px;
+    top: 0;
+    background: #b64ec3;
+}
+.edu-info-inner:after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 0;
+    top: 0;
+    background: #b64ec3;
+    transform: rotate(45deg);
+    border-radius: 4px;
+}
+.data-\[te-nav-active\]\:active-tab[data-te-nav-active]
+{
+    background-color: var(--primary);    
+}
+.data-\[te-nav-active\]\:active-tab[data-te-nav-active] svg path, .tab-nav:hover svg path 
+{
+    fill: white;    
+}
 @media only screen and (max-width: 1023.99px) {
 
     #nav ul li {
@@ -525,5 +647,16 @@ section:hover .section-title.center-title h3:after {
     
     .tab-content-area > div {
         height: unset;
+    }
+    .doc-r {
+        border-left: none;
+        padding-left: 0;
+    }
+    .doc-r {
+        width: 100%;
+    }
+    .doc-title:after {
+        left: 50%;
+        transform: translateX(-50%);
     }
 }

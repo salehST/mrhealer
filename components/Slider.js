@@ -27,17 +27,17 @@ const Slider = () => {
                 className="mySwiper">
                         <SwiperSlide>
                         	<a href="https://play.google.com/store/apps/details?id=com.healer.patient" target={"_blank"}>
-                                <Image lazy src="/img/banners/1.png" height={650} width={2000} className=" drop-shadow-md" alt="icon" />
+                                <Image priority src="/img/banners/1.png" height={650} width={2000} className=" drop-shadow-md" alt="icon" />
                             </a>
                         </SwiperSlide>
                         <SwiperSlide>
 							<a href="https://play.google.com/store/apps/details?id=com.healer.patient" target={"_blank"}>	
-                                <Image lazy src="/img/banners/2.png" height={650} width={2000} className=" drop-shadow-md" alt="icon" />
+                                <Image priority src="/img/banners/2.png" height={650} width={2000} className=" drop-shadow-md" alt="icon" />
 							</a>
                         </SwiperSlide>
                         <SwiperSlide>
 							<a href="https://play.google.com/store/apps/details?id=com.healer.patient" target={"_blank"}>
-                                <Image lazy src="/img/banners/3.png" height={650} width={2000} className=" drop-shadow-md" alt="icon" />
+                                <Image priority src="/img/banners/3.png" height={650} width={2000} className=" drop-shadow-md" alt="icon" />
 							</a>
                         </SwiperSlide>
                 </Swiper>

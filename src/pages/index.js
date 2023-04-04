@@ -10,11 +10,12 @@ import TestMedicine from "../../components/TestMedicine";
 import CustomerSupport from "../../components/CustomerSupport";
 import FaceBook from "../../components/FaceBook";
 import Faq from "../../components/Faq";
-
+import Script from "next/script";
 
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 export default function Home() {
@@ -62,6 +63,10 @@ export default function Home() {
         });
         }`}
     </script> */}
+      {/* <script
+    async
+    src="https://www.youtube.com/iframe_api"
+   /> */}
       </Head>
       <main className={poppins.className}>
         <Slider />
@@ -75,6 +80,7 @@ export default function Home() {
         <Faq />
       </main>
 
+      <script src={"/js/main.js"}></script>
     </>
   );
 }

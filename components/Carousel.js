@@ -1,7 +1,7 @@
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image";
+
 // Import Swiper styles
 import "swiper/swiper.css";
 import "swiper/css/navigation";
@@ -10,19 +10,19 @@ import Axios from "axios";
 
 // import required modules
 import { Navigation, Autoplay } from "swiper";
-import { lazy, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
+import DepartmentCarousel from "./DepartmentCarosel";
 
-
-
+console.log("API " + process.env.API_URL);
 const  Carousel = () => {
-
+    const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
     const [myData, setData] = useState([])
     useEffect(()=>{
-        Axios.get(`https://mrhealerbd.com/api/v1/admin/department/all`).then((res)=>{
+        Axios.get(`${apiUrl}/admin/department/all`).then((res)=>{
             setData(res.data);
         }).catch((err) =>{
-            console.log(err)
+            console.log(err.res)
         });
     },[]);
     const apiData = Object.entries(myData);
@@ -34,7 +34,7 @@ const  Carousel = () => {
     <>  
     <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-12 department-carousel strip-top b-strip">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
-            <div className="section-title center-title text-center mb-8">
+            <div  data-aos="fade-up" className="section-title center-title text-center mb-8">
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto'>our Specialty</h3>
             </div>
             <div className="carousel-inner-area">
@@ -60,17 +60,12 @@ const  Carousel = () => {
                 navigation={true} 
                 modules={[Navigation, Autoplay]} 
                 className="mySwiper">
-                    { departmentData.map((el, index) => {
+                    { departmentData.map((el) => {
                         const {dept_id, dept_name, image} = el
                         return  ( 
-                            <SwiperSlide key={index}>
-                            <a href="https://play.google.com/store/apps/details?id=com.healer.patient" target={"_blank"}>
-                                <div key={dept_id} className="department-info bg-white shadow-md rounded-md hover:shadow-lg transition p-5 text-center">
-                                    <Image lazy src={`https://healerspc.sgp1.digitaloceanspaces.com/media/departments/${image}`} height={150} width={150} className=" h-36 w-36 drop-shadow-md" alt="icon" />
-                                    <h4 className="text-[#B64EC3] text-base md:text-xl font-normal capitalize">{dept_name}</h4>
-                                </div>
-                            </a>
-                        </SwiperSlide>
+                            <SwiperSlide>
+                                <DepartmentCarousel dept_id={dept_id} dept_name={dept_name} image={image} />
+                            </SwiperSlide>
                         )
                     })
 

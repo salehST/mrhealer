@@ -2,14 +2,14 @@ import React from 'react'
 import Image from 'next/image'
 const CustomerSupport = () => {
   return (
-    <section className="w-full bg-white p-4 md:py-20 doctor-booking  relative">
+    <section className="w-full bg-white overflow-hidden p-4 pt-0 pb-0 md:pt-10 md:pb-10 support-section  relative">
         <div className="container mx-auto max-w-screen-xl">{/* <!-- container start --> */}
-            <div className="section-title mb-12">
+            <div data-aos="fade-up" className="section-title mb-12">
                 <h3 className='capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold w-auto'>Customer Support</h3>
             </div>
             <div className="bg-img">
-                <svg width="750" height="500" viewBox="0 0 750 500" className=' absolute w-auto h-60 md:h-[400px] bottom-0 right-0' fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g opacity="0.25" clipPath="url(#clip0_156_608)">
+                <svg width="750" height="500" viewBox="0 0 750 500" className=' absolute w-auto h-60 md:h-[700px] bottom-0 right-0' fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.15" clipPath="url(#clip0_156_608)">
     <mask id="mask0_156_608" style={{maskType:"luminance"}} maskUnits="userSpaceOnUse" x="0" y="0" width="750" height="500">
     <path d="M750 0H0V500H750V0Z" fill="white"/>
     </mask>
@@ -239,22 +239,30 @@ const CustomerSupport = () => {
     </defs>
                 </svg>
             </div>
-            <div className="flex flex-col items-start justify-start gap-8">
-                <div className="support-info w-full">
-                    <div className="inner-texts">
-                    <h4 className='text-[#B64EC3] text-2xl font-medium mb-6'>
-                    How Does It Work ?</h4>
-                    <p className="text-black text-base font-normal leading-7 text-justify">Signing up for our app provides easy access to a wide range of healthcare options. Simply use the service's search tools to choose a doctor who fits your needs, then pay as you go for an on-demand consultation (Instant Live Doctor or Scheduled Online Specialist). The doctor will call you via Mr. Healer app on time. The next step is to retrieve your doctor's submitted prescription and then to acquire the necessary treatment or diagnostics. Maintain regular doctor visits and take all prescribed medications until you feel well. You can also take an appointment and consult with the doctor in his offline chamber (Available for Selected Doctors). You have 24/7 access to a variety of medical services, such as booking a pathology test or medicine home delivery.</p>
+            
+            <div className="support-content  bg-[#ffffff7b] relative border border-gray-50 rounded-lg p-5 shadow-md hover:shadow-lg transition">
+                <div className="support-info w-full flex flex-col md:flex-row items-center justify-between gap-8">
+                    <div className="content-right w-full md:w-3/5">
+                        <h4 data-aos="fade-up" data-aos-delay="300" className='text-[#B64EC3] text-2xl font-medium mb-6'>
+                            How Does It Work ?</h4>
+                        <div data-aos="fade-up" data-aos-delay="500" className="inner-texts">
+                            <p className="text-black text-base font-normal leading-7 text-justify">Signing up for our app provides easy access to a wide range of healthcare options. Simply use the service's search tools to choose a doctor who fits your needs, then pay as you go for an on-demand consultation (Instant Live Doctor or Scheduled Online Specialist). The doctor will call you via Mr. Healer app on time. The next step is to retrieve your doctor's submitted prescription and then to acquire the necessary treatment or diagnostics. Maintain regular doctor visits and take all prescribed medications until you feel well. You can also take an appointment and consult with the doctor in his offline chamber (Available for Selected Doctors). You have 24/7 access to a variety of medical services, such as booking a pathology test or medicine home delivery.</p>
+                        </div>
+
+                        
+                        <h5 data-aos="fade-up" data-aos-delay="700" className='text-[#B64EC3] text-xl font-medium mt-8 mb-4'>
+                        How to Contact Customer Care ?</h5>
+                        <p data-aos="fade-up" data-aos-delay="900" className='text-black text-base font-normal leading-7 text-justify'>You can contact us via our hotline number provided in the contact information section for any query or complaint. You can also reach us through our Facebook page or directly calling through our app or through email.</p>
                     </div>
-                    <div className="inner-texts">
-                    <h5 className='text-[#B64EC3] text-xl font-medium mt-8 mb-4'>
-                    How to Contact Customer Care ?</h5>
-                    <p className='text-black text-base font-normal leading-7 text-justify'>You can contact us via our hotline number provided in the contact information section for any query or complaint. You can also reach us through our Facebook page or directly calling through our app or through email.</p>
-                    </div>
-                </div>
-                <div className="flex items-start justify-start w-full mt-8">
-                    <div className="play-btn flex items-center justify-center relative z-[1]">
-                        <a href="" className='underline text-black hover:text-gray-900 transition-colors  flex items-center justify-center'>Watch The Video <Image width={110} height={110} src="/img/play-btn.svg" className=' ml-4' alt="icon" /></a> 
+                    <div data-aos="fade-up" data-aos-delay="350" className="video-left w-full md:w-2/5">
+                        
+
+                    
+                        <div className="flex items-start justify-center w-full">
+                            <div className="play-btn flex items-center justify-center relative z-[1]">
+                                <a href="" className='underline text-black hover:text-gray-900 transition-colors  flex items-center justify-center'>Watch The Video <Image width={110} height={110} src="/img/play-btn.svg" className=' ml-4' alt="icon" /></a> 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -1,14 +1,15 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 
 const Navbar = () => {
-
+  const router = useRouter();
   return (
   
-    <div className="bg-white w-full p-4">
-      <div className="lex flex-col max-w-screen-xl px-2 mx-auto md:items-center md:justify-between md:flex-row md:px-0 ">
+    <div className="bg-white w-full p-4 font-poppins">
+      <div className="flex flex-col max-w-screen-xl px-2 mx-auto md:items-center md:justify-between md:flex-row md:px-0 ">
         {/* <!-- container start --> */}
         <nav id="nav"
           className="flex-no-wrap relative flex w-full items-center justify-between  lg:flex-wrap lg:justify-start"
@@ -19,7 +20,6 @@ const Navbar = () => {
 
             {/* <!-- left elements start --> */}
             <div className="relative flex items-center">
-           
                 <Link href={'/'} className="mt-2 mr-2 flex items-center lg:mt-0 cursor-pointer">
                         <Image
                         src="/img/header-logo.svg"
@@ -66,8 +66,8 @@ const Navbar = () => {
                     data-te-navbar-nav-ref
                 >
                     <li className="lg:pr-4" data-te-nav-item-ref>
-                        <Link
-                            className="text-black active-page"
+                        <Link scroll={false}
+                            className={router.pathname == "/" ? " active-page" : ""}
                             href={'/'}
                             data-te-nav-link-ref
                         >
@@ -75,8 +75,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="lg:pr-4" data-te-nav-item-ref>
-                        <Link
-                            className="text-black capitalize"
+                        <Link scroll={false}
+                            className={router.pathname == "/departments" ? " active-page" : ""}
                             href={'/departments'}
                             data-te-nav-link-ref
                         >
@@ -84,8 +84,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="lg:pr-4" data-te-nav-item-ref>
-                        <Link
-                            className="text-black capitalize"
+                        <Link scroll={false}
+                            className={router.pathname == "/#service" ? " active-page" : ""}
                             href={'/#service'}
                             data-te-nav-link-ref
                         >
@@ -93,8 +93,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="lg:pr-4" data-te-nav-item-ref>
-                        <Link
-                            className="text-black capitalize"
+                        <Link scroll={false}
+                            className={router.pathname == "/#getDoctor" ? " active-page" : ""}
                             href={'/#getDoctor'}
                             data-te-nav-link-ref
                         >
@@ -102,7 +102,7 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="lg:pr-4" data-te-nav-item-ref>
-                        <Link
+                        <Link scroll={false}
                             className="text-black capitalize"
                             href={'/'}
                             data-te-nav-link-ref
@@ -111,8 +111,8 @@ const Navbar = () => {
                         </Link>
                     </li>
                     <li className="lg:pr-0" data-te-nav-item-ref>
-                        <Link
-                            className="text-black capitalize"
+                        <Link scroll={false}
+                            className={router.pathname == "/#contact" ? " active-page" : ""}
                             href={'/#contact'}
                             data-te-nav-link-ref
                         >

@@ -43,15 +43,11 @@ const { id }  = router.query;
 
 						  
 					{
-						allData.map((doctors) => {
+						allData.map((doctors, index) => {
 							const { doctor_id , name, profile_picture, bmdc_number, degree, regular_fee, rating, dept_name, experience
 							} = doctors;
-							return ( 
-								<>
-								
-								<DoctorsList doctor_id={doctor_id} name={name} profile_picture={profile_picture} bmdc_number={bmdc_number} degree={degree} regular_fee={regular_fee} rating={rating} dept_name={dept_name} experience={experience} />
-
-								</>
+							return ( 								
+								<DoctorsList key={index} doctor_id={doctor_id} name={name} profile_picture={profile_picture} bmdc_number={bmdc_number} degree={degree} regular_fee={regular_fee} rating={rating} dept_name={dept_name} experience={experience} />
 							)
 						})
 					}

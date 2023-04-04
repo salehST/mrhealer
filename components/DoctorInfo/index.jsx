@@ -3,15 +3,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const DoctorInfo = ({doctor , review, educations, experiences}) => {
-    console.log(doctor)
-    console.log(review)
-  return (
-    <>
-          <div
-        
-        className="doc-info-inner p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition mb-12"
-      >
-        <div key={doctor.doctor_id} className="single-doc-info flex flex-col md:flex-row gap-4 items-stretch justify-between">
+  return (     <div>
+     <div className='doc-info-inner p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition mb-12'>
+        <div className="single-doc-info flex flex-col md:flex-row gap-4 items-stretch justify-between">
           <div className="profile-left flex-col md:flex-row gap-4 flex items-center justify-start w-full md:w-4/6">
             <div>
               <div className="profile-img rounded-md overflow-hidden basis-36 h-36 w-36 md:h-52 md:w-52 lg:h-[360px] lg:w-[360px] shadow-md">
@@ -170,7 +164,7 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                   aria-controls="tabs-01"
                   aria-selected="true"
                   ><svg width="34" height="34" viewBox="0 0 34 34" className=' w-auto h-10' fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <g clip-path="url(#clip0_180_1798)">
+                  <g clipPath="url(#clip0_180_1798)">
                   <path d="M5.3125 3.71875V28.1562C5.3125 28.4495 5.5505 28.6875 5.84375 28.6875H12.58C13.0027 28.6875 13.4081 28.8554 13.707 29.1543C14.0058 29.4532 14.1737 29.8586 14.1737 30.2812C14.1737 30.7039 14.0058 31.1093 13.707 31.4082C13.4081 31.7071 13.0027 31.875 12.58 31.875H5.84375C4.85748 31.875 3.9116 31.4832 3.2142 30.7858C2.5168 30.0884 2.125 29.1425 2.125 28.1562V3.71875C2.125 1.666 3.791 0 5.84375 0H23.9062C25.959 0 27.625 1.666 27.625 3.71875V20.1577C27.625 20.5804 27.4571 20.9858 27.1582 21.2847C26.8593 21.5836 26.4539 21.7515 26.0312 21.7515C25.6086 21.7515 25.2032 21.5836 24.9043 21.2847C24.6054 20.9858 24.4375 20.5804 24.4375 20.1577V3.71875C24.4375 3.57785 24.3815 3.44273 24.2819 3.3431C24.1823 3.24347 24.0471 3.1875 23.9062 3.1875H5.84375C5.70285 3.1875 5.56773 3.24347 5.4681 3.3431C5.36847 3.44273 5.3125 3.57785 5.3125 3.71875ZM33.5198 23.9849L23.8361 33.439C23.5355 33.732 23.1314 33.8945 22.7117 33.8913C22.2919 33.8881 21.8904 33.7195 21.5942 33.422L17.4654 29.2782C17.1844 28.9756 17.0319 28.5757 17.0399 28.1628C17.048 27.7499 17.216 27.3563 17.5086 27.0648C17.8011 26.7734 18.1954 26.6068 18.6083 26.6003C19.0212 26.5938 19.4205 26.7479 19.7221 27.03L22.7375 30.0581L31.2927 21.7026C31.5954 21.4073 32.003 21.2443 32.4258 21.2495C32.8486 21.2547 33.2521 21.4276 33.5474 21.7302C33.8427 22.0329 34.0057 22.4405 34.0005 22.8633C33.9953 23.2861 33.8224 23.6896 33.5198 23.9849ZM10.0938 8.5H19.6562C20.0789 8.5 20.4843 8.66791 20.7832 8.9668C21.0821 9.26568 21.25 9.67106 21.25 10.0937C21.25 10.5164 21.0821 10.9218 20.7832 11.2207C20.4843 11.5196 20.0789 11.6875 19.6562 11.6875H10.0938C9.67106 11.6875 9.26568 11.5196 8.9668 11.2207C8.66791 10.9218 8.5 10.5164 8.5 10.0937C8.5 9.67106 8.66791 9.26568 8.9668 8.9668C9.26568 8.66791 9.67106 8.5 10.0938 8.5ZM8.5 16.4687C8.5 16.0461 8.66791 15.6407 8.9668 15.3418C9.26568 15.0429 9.67106 14.875 10.0938 14.875H14.3438C14.7664 14.875 15.1718 15.0429 15.4707 15.3418C15.7696 15.6407 15.9375 16.0461 15.9375 16.4687C15.9375 16.8914 15.7696 17.2968 15.4707 17.5957C15.1718 17.8946 14.7664 18.0625 14.3438 18.0625H10.0938C9.67106 18.0625 9.26568 17.8946 8.9668 17.5957C8.66791 17.2968 8.5 16.8914 8.5 16.4687Z" fill="black"/>
                   </g>
                   <defs>
@@ -206,7 +200,7 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                   aria-controls="tabs-3"
                   aria-selected="false">
                     <svg width="34" height="34" viewBox="0 0 34 34" className=' w-auto h-10' fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_180_1566)">
+<g clipPath="url(#clip0_180_1566)">
 <path d="M17.765 33.32C18.3345 33.218 18.9125 33.1415 19.482 33.0055C23.426 32.096 26.6135 28.679 27.268 24.684C28.118 19.4735 25.194 14.637 20.196 12.971C14.263 10.9905 7.74346 14.9345 6.73196 21.1055C5.81396 26.724 9.33296 31.892 14.892 33.099C15.334 33.1925 15.793 33.2435 16.235 33.32C16.745 33.32 17.255 33.32 17.765 33.32ZM10.0725 29.2145C6.91046 25.908 6.50246 19.9835 10.455 16.15C14.4245 12.308 20.774 12.6735 24.2505 16.915C27.659 21.08 26.5965 26.5625 23.9105 29.189C22.8735 27.115 21.233 25.7465 18.9975 25.0835C21.556 23.528 21.505 20.3575 19.907 18.734C18.2835 17.0765 15.623 17.0935 14.042 18.7765C12.4355 20.485 12.5205 23.562 14.994 25.0835C12.7585 25.7465 11.1265 27.115 10.0725 29.2145ZM17.3825 32.3C14.8495 32.3 12.7585 31.5605 11.0755 30.2005C10.931 30.0815 10.8375 29.9965 10.948 29.784C12.189 27.268 14.2035 25.8825 17.0085 25.874C19.805 25.8655 21.811 27.251 23.052 29.75C23.1455 29.937 23.1115 30.039 22.95 30.175C21.216 31.5775 19.2355 32.266 17.3825 32.3ZM20.009 21.5305C20.009 23.222 18.666 24.565 16.9745 24.565C15.334 24.565 13.991 23.2135 13.9825 21.556C13.974 19.873 15.3255 18.5215 17.017 18.53C18.6745 18.53 20.0175 19.873 20.009 21.5305Z" fill="black"/>
 <path d="M16.8046 0.679993C16.6771 0.883993 16.5156 1.06249 16.4391 1.28349C16.1416 2.15049 15.8696 3.03449 15.5806 3.92699C14.6796 3.92699 13.7871 3.92699 12.9031 3.92699C12.8011 3.92699 12.6906 3.92699 12.5886 3.92699C12.3251 3.91849 12.1296 4.03749 12.0531 4.29249C11.9766 4.53049 12.0701 4.72599 12.2741 4.87049C12.9626 5.37199 13.6511 5.86499 14.3396 6.36649C14.4501 6.45149 14.5606 6.52799 14.7051 6.62999C14.5521 7.09749 14.4076 7.56499 14.2546 8.03249C14.1016 8.49999 13.9571 8.95899 13.7956 9.42649C13.7106 9.68149 13.7106 9.91949 13.9486 10.0895C14.1866 10.268 14.4246 10.2 14.6456 10.03C15.3596 9.50299 16.0906 8.98449 16.8046 8.44899C16.9576 8.32999 17.0596 8.33849 17.2126 8.44899C17.9181 8.97599 18.6406 9.48599 19.3461 10.013C19.5756 10.183 19.8136 10.2765 20.0686 10.0895C20.3151 9.91099 20.2981 9.66449 20.2046 9.40099C19.8986 8.48299 19.6096 7.57349 19.3036 6.63849C20.0261 6.11999 20.7401 5.60149 21.4456 5.08299C21.5391 5.01499 21.6326 4.94699 21.7261 4.87899C21.9301 4.73449 22.0236 4.53899 21.9471 4.30099C21.8706 4.04599 21.6751 3.93549 21.4116 3.93549C20.5446 3.93549 19.6691 3.93549 18.8021 3.93549C18.6831 3.93549 18.5726 3.93549 18.4196 3.93549C18.2666 3.46799 18.1136 2.99199 17.9606 2.52449C17.8246 2.09949 17.7056 1.66599 17.5441 1.25799C17.4676 1.05399 17.3061 0.875493 17.1871 0.688493C17.0596 0.679993 16.9321 0.679993 16.8046 0.679993ZM19.7881 4.95549C19.7966 4.97249 19.7966 4.99799 19.8051 5.01499C19.4226 5.29549 19.0316 5.57599 18.6491 5.85649C18.1476 6.22199 18.1221 6.29849 18.3176 6.89349C18.4621 7.34399 18.6066 7.79449 18.7511 8.23649C18.3261 8.00699 17.9606 7.73499 17.5951 7.47149C17.0086 7.04649 16.9916 7.04649 16.4051 7.47999C16.0481 7.74349 15.6826 8.00699 15.3256 8.26199C15.4361 7.70949 15.5891 7.20799 15.7591 6.71499C15.8696 6.38349 15.8016 6.14549 15.5126 5.94999C15.0706 5.64399 14.6456 5.32099 14.2036 4.99799C14.2461 4.97249 14.2631 4.94699 14.2801 4.94699C14.6966 4.94699 15.1046 4.94699 15.5211 4.94699C16.3371 4.94699 16.3371 4.94699 16.5921 4.17349C16.7196 3.76549 16.8556 3.36599 16.9916 2.95799C17.2211 3.45099 17.3741 3.94399 17.5356 4.43699C17.6716 4.85349 17.7991 4.94699 18.2241 4.94699C18.7341 4.95549 19.2611 4.95549 19.7881 4.95549Z" fill="black"/>
 <path d="M27.1659 6.99549C26.2224 6.71499 25.3044 6.43449 24.3779 6.17949C24.1994 6.12849 23.9529 6.15399 23.7914 6.24749C23.5364 6.39199 23.5364 6.71499 23.7574 6.99549C24.2844 7.68399 24.8114 8.38099 25.3639 9.05249C25.5254 9.25649 25.5509 9.39249 25.3894 9.62199C24.8879 10.319 24.4119 11.033 23.9189 11.7385C23.7574 11.968 23.6809 12.1975 23.8679 12.444C24.0549 12.682 24.2929 12.682 24.5564 12.58C25.3894 12.274 26.2309 11.9765 27.0639 11.6705C27.2424 11.6025 27.3444 11.628 27.4634 11.781C27.9819 12.478 28.5259 13.158 29.0529 13.855C29.2314 14.093 29.4354 14.2715 29.7499 14.161C30.0644 14.0505 30.0984 13.77 30.0814 13.481C30.0474 12.631 30.0389 11.781 29.9964 10.931C29.9879 10.71 30.0389 10.5995 30.2684 10.523C31.0929 10.251 31.9089 9.94499 32.7249 9.65599C32.9884 9.56249 33.1924 9.42649 33.1924 9.12899C33.1924 8.80599 32.9714 8.67849 32.6909 8.59349C31.8409 8.35549 30.9994 8.10049 30.1579 7.86249C29.9624 7.81149 29.8859 7.72649 29.8859 7.51399C29.8774 6.64699 29.8434 5.77149 29.8264 4.90449C29.8179 4.59849 29.7499 4.34349 29.4354 4.25849C29.1209 4.17349 28.9509 4.37749 28.7894 4.60699C28.2539 5.40599 27.7184 6.18799 27.1659 6.99549ZM30.9994 9.18849C30.5914 9.33299 30.2599 9.45199 29.9284 9.57099C28.8999 9.93649 28.9084 9.82599 28.9679 10.9735C28.9849 11.322 28.9679 11.6705 28.9679 12.087C28.6194 11.628 28.3134 11.237 28.0074 10.8375C27.6929 10.4295 27.5739 10.3955 27.0809 10.574C26.6049 10.744 26.1374 10.914 25.5764 11.1095C25.8994 10.6335 26.1714 10.2425 26.4349 9.85149C26.7919 9.33299 26.7919 9.26499 26.4009 8.76349C26.1119 8.38949 25.8144 8.00699 25.5254 7.63299C26.0864 7.74349 26.6049 7.88799 27.1149 8.04099C27.4294 8.13449 27.6674 8.06649 27.8544 7.77749C28.1094 7.38649 28.3729 7.00399 28.6449 6.62149C28.6874 6.56199 28.7384 6.51099 28.7894 6.45149C28.8659 6.99549 28.8574 7.51399 28.8659 8.03249C28.8744 8.46599 28.9764 8.58499 29.4014 8.70399C29.9114 8.86549 30.4214 9.01849 30.9994 9.18849Z" fill="black"/>
@@ -266,28 +260,26 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                         <span className=' text-[#2F2F2F] text-base font-normal'>{doctor.profile_description}</span>
                       </div>
                       </div>
-                      <div class="flex flex-col w-full">
-                        <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
-                          <div class="inline-block min-w-full sm:px-6 lg:px-8">
-                            <div class="overflow-hidden">
-                              <table class="min-w-full text-left text-xl font-light">
-                                <thead class="border-b border-[#E496EE] font-normal">
+                      <div className="flex flex-col w-full">
+                        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                          <div className="inline-block min-w-full sm:px-6 lg:px-8">
+                            <div className="overflow-hidden">
+                              <table className="min-w-full text-left text-xl font-light">
+                                <thead className="border-b border-[#E496EE] font-normal">
                                   <tr>
-                                    <th scope="col" class="px-6 pb-4">Availability</th>
-                                    <th scope="col" class="px-6 pb-4">Consultation Time</th>
+                                    <th scope="col" className="px-6 pb-4">Availability</th>
+                                    <th scope="col" className="px-6 pb-4">Consultation Time</th>
                                   </tr>
                                 </thead>
                                 <tbody>
-                                {doctor.schedules.map((el)=>{
+                                {doctor.schedules.map((el, index)=>{
           
                                       return ( 
-                                        <>
-                                        <tr key={doctor.doctor_id}
-                                          class="border-b transition duration-300 ease-in-out hover:bg-neutral-100">
-                                          <td class="whitespace-nowrap text-base px-6 py-4">{el.day}</td>
-                                          <td class="whitespace-nowrap text-base px-6 py-4"><span><span>{el.start_time}</span> - <span>{el.end_time}</span></span></td>
+                                        <tr key={index} id={doctor.doctor_id}
+                                          className="border-b transition duration-300 ease-in-out hover:bg-neutral-100">
+                                          <td className="whitespace-nowrap text-base px-6 py-4">{el.day}</td>
+                                          <td className="whitespace-nowrap text-base px-6 py-4"><span><span>{el.start_time}</span> - <span>{el.end_time}</span></span></td>
                                         </tr>
-                                      </>
                                       )
                                     })
                                   }
@@ -310,8 +302,8 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
 
                   {educations.length > 0 && (
                       <div className='edu-info  flex flex-col-reverse'>
-                        {educations.map((education) => (
-                          <div key={education.doctor_education_id} className='px-6 bg-white'>
+                        {educations.map((education, index) => (
+                          <div key={index}  id={education.doctor_education_id} className='px-6 bg-white'>
                             <div className="edu-info-inner pb-6">
                               <div className="shadow hover:shadow-md border border-gray-100 rounded transition p-4">
                                   <h4 className='text-[#2F2F2F] text-base font-normal mb-1'>Institution: <br /> <span className='text-[#2F2F2F] text-base font-bold'>{education.institute}</span></h4>
@@ -335,8 +327,8 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                   <div className="exp-info flex flex-col-reverse">
                   {experiences.length > 0 && (
                             <>
-                            {experiences.map((exp) => (
-                              <div key={exp.doctor_experience_id} className='px-6 bg-white'>
+                            {experiences.map((exp, index) => (
+                              <div key={index} id={exp.doctor_experience_id} className='px-6 bg-white'>
                                 <div className="edu-info-inner pb-6">
                                   <div className="shadow hover:shadow-md border border-gray-100 rounded transition p-4">
                                       <h4 className='text-[#2F2F2F] text-base font-normal mb-1'>Institution: <br /> <span className='text-[#2F2F2F] text-base font-bold'>{exp.work_place}</span></h4>
@@ -344,7 +336,6 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                                       <p className='text-[#2F2F2F] text-base font-normal mb-1'>Post: <br /><span className='text-[#2F2F2F] text-base font-bold'>{exp.designation}</span></p>
                                       <p className='text-[#2F2F2F] text-base font-normal mb-1'>Duration: <br /><span className='text-[#2F2F2F] text-base font-bold'>
                                         {exp.start_year} - {exp.end_year}</span></p>
-                                      {/* <p className='text-[#2F2F2F] text-base font-normal'>{education.discipline}</p> */}
                                     </div>
                                 </div>
                               <h2></h2>
@@ -369,10 +360,10 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                   <div className="review-inner-area">
                   {review && (
                   <>
-                  {review.map((el) => (
+                  {review.map((el,index) => (
                    
             
-                    <div key={el.doctor_review_id} className="single-review p-6 bg-[#fbfbfb] shadow hover:shadow-md rounded-md border-gray-600 transition mb-4">
+                    <div key={index} id={el.doctor_review_id} className="single-review p-6 bg-[#fbfbfb] shadow hover:shadow-md rounded-md border-gray-600 transition mb-4">
                         <div className="profile-top flex justify-between items-center mb-6">
                           <div className="flex items-center justify-start gap-3">
                             <div className="pic rounded-full overflow-hidden w-14 h-14">
@@ -429,10 +420,8 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
               </div>
             </div>
         </div>
-      </div>
-      
-       
-  </>
+      </div>     
+       </div>
   )
 }
 

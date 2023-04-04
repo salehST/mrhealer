@@ -8,13 +8,7 @@ import DoctorInfo from "../../../../components/DoctorInfo";
 
 const DoctorProfile = () => {  
   // console.log("token "+ process.env.API_TOKEN);
-    const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXRpZW50X2lkIjoxMTMsIm5hbWUiOiJQaGVuaXgiLCJwaG9uZSI6IjAxNzA3MDc4NjM3IiwiZW1haWwiOiJhYmR1cjEwMTE3QGdtYWlsLmNvbSIsImJpcnRoZGF5IjoiMTk5NS0wNi0xNSIsInNleCI6Im1hbGUiLCJ3ZWlnaHQiOiI2NCIsImJsb29kX2dyb3VwIjoiTygrdmUpIiwiYWRkcmVzcyI6IkRoYWthIiwiYWNjb3VudF9zdGF0dXMiOiJhY3RpdmUiLCJwcm9maWxlX3BpY3R1cmUiOiJwYXRpZW50XzA0Mjc2NjRkOWMzNDA1YWJkODUxMzllZTc2NDQyNzBkLmpwZyIsImRldmljZV90b2tlbiI6ImQ3ZWVlNGNmYWVlMTk3ZmMiLCJmY21fdG9rZW4iOiJjMDd6T0tSWlF6aUJZb2llak4zdkQtOkFQQTkxYkZ2U25DanF1czlTei1UeVFYczBQTEpIR1M2Tjdzczd6M3c1X3JKWndzMU5iODgwTmI5T0NMN0NlUmU5Z200OWZ1cERINjFfUHAyR1BhLXAyZDdGYlN3MVVXQnM0NVhHWWNRQlJUY2I5ZUhSOXpuck5JTkExSkppejV5VXJQRmRWUDNkdWtzIiwiYmFubmVkIjowLCJ1c2VyVHlwZSI6InBhdGllbnQiLCJpYXQiOjE2NzkyMzI2NzUsImV4cCI6MTgzNDc1MjY3NX0.5flWhLIj0pP1bPfGrAKaV6h8NXsQM9siAB0fzJyYtAU"
-    
-    const axiosInstance = Axios.create({
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-    });
+
     const router  = useRouter();
     const { doc } = router.query;
     const [myData, setData] = useState(null);
@@ -23,6 +17,13 @@ const DoctorProfile = () => {
     const [myDataD, setDataD] = useState(null);
   
     useEffect(() => {
+      const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXRpZW50X2lkIjoxMTMsIm5hbWUiOiJQaGVuaXgiLCJwaG9uZSI6IjAxNzA3MDc4NjM3IiwiZW1haWwiOiJhYmR1cjEwMTE3QGdtYWlsLmNvbSIsImJpcnRoZGF5IjoiMTk5NS0wNi0xNSIsInNleCI6Im1hbGUiLCJ3ZWlnaHQiOiI2NCIsImJsb29kX2dyb3VwIjoiTygrdmUpIiwiYWRkcmVzcyI6IkRoYWthIiwiYWNjb3VudF9zdGF0dXMiOiJhY3RpdmUiLCJwcm9maWxlX3BpY3R1cmUiOiJwYXRpZW50XzA0Mjc2NjRkOWMzNDA1YWJkODUxMzllZTc2NDQyNzBkLmpwZyIsImRldmljZV90b2tlbiI6ImQ3ZWVlNGNmYWVlMTk3ZmMiLCJmY21fdG9rZW4iOiJjMDd6T0tSWlF6aUJZb2llak4zdkQtOkFQQTkxYkZ2U25DanF1czlTei1UeVFYczBQTEpIR1M2Tjdzczd6M3c1X3JKWndzMU5iODgwTmI5T0NMN0NlUmU5Z200OWZ1cERINjFfUHAyR1BhLXAyZDdGYlN3MVVXQnM0NVhHWWNRQlJUY2I5ZUhSOXpuck5JTkExSkppejV5VXJQRmRWUDNkdWtzIiwiYmFubmVkIjowLCJ1c2VyVHlwZSI6InBhdGllbnQiLCJpYXQiOjE2NzkyMzI2NzUsImV4cCI6MTgzNDc1MjY3NX0.5flWhLIj0pP1bPfGrAKaV6h8NXsQM9siAB0fzJyYtAU"
+    
+      const axiosInstance = Axios.create({
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+      });
       const apiUrl = typeof window !== 'undefined' ? process.env.API_URL : '';
       if (doc) {
         axiosInstance

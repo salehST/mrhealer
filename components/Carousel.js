@@ -60,11 +60,11 @@ const  Carousel = () => {
                 navigation={true} 
                 modules={[Navigation, Autoplay]} 
                 className="mySwiper">
-                    { departmentData.map((el) => {
-                        const {dept_id, dept_name, image} = el
+                    { departmentData.map((el, index) => {
+                        // const {dept_id, dept_name, image} = el
                         return  ( 
-                            <SwiperSlide>
-                                <DepartmentCarousel dept_id={dept_id} dept_name={dept_name} image={image} />
+                            <SwiperSlide  key={index}>
+                                <DepartmentCarousel dept_id={el.dept_id} dept_name={el.dept_name} image={el.image} />
                             </SwiperSlide>
                         )
                     })

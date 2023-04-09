@@ -1,20 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 :root {
-    --primary: #B64EC3
+    --primary: #b64ec3;
 }
+
 html {
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: poppins;
-    background-color: #FFF4FF;
+    background-color: #fff4ff;
 }
+
 .max-w-screen-xl {
-    max-width: 1160px!important;
+    max-width: 1160px !important;
 }
-#nav li a.active-page, #nav li a {
+
+#nav li a.active-page,
+#nav li a {
     position: relative;
 }
 
@@ -23,14 +29,15 @@ body{
     content: "";
     width: 0%;
     height: 2px;
-    background: #9747FF;
+    background: #9747ff;
     left: 0;
     bottom: -6px;
     border-radius: 5px;
     transition: 500ms;
 }
 
-#nav li:hover a:after, #nav li a.active-page:after  {
+#nav li:hover a:after,
+#nav li a.active-page:after {
     width: 75%;
 }
 
@@ -48,86 +55,100 @@ body{
     opacity: 100%;
     transition: opacity 0.5s;
     z-index: 1;
-  }
-  
-  .back-to-top:hover {
+}
+
+.back-to-top:hover {
     opacity: 60%;
-  }
-  
-  .hide{
+}
+
+.hide {
     opacity: 0%;
-  }
-  
-  .back-to-top-icon {
+}
+
+.back-to-top-icon {
     width: 1rem;
     height: 1rem;
     color: #ffffff;
-  }
-  
-  .progress-bar {
+}
+
+.progress-bar {
     height: 2px;
     background: #0050fe3a;
     position: fixed;
     top: 0;
     left: 0;
-  }
+}
+
 /* go to top end */
 /*Animations*/
-@keyframes spin {to{transform:rotate(-360deg)}} 
+@keyframes spin {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
 .recalculate-btn:hover svg {
-    animation:spin 1s linear infinite;
+    animation: spin 1s linear infinite;
 }
+
 .blob {
-	/* background: rgba(52, 172, 224, 1); */
-	box-shadow: 0 0 0 0 rgb(189 5 162);
+    /* background: rgba(52, 172, 224, 1); */
+    box-shadow: 0 0 0 0 rgb(189 5 162);
 }
-.cal-box:hover .blob{
-	animation: pulse-blue 2s infinite;
+
+.cal-box:hover .blob {
+    animation: pulse-blue 2s infinite;
 }
-.cal-options a:hover .blob{
-	animation: pulse-blue 2s infinite;
+
+.cal-options a:hover .blob {
+    animation: pulse-blue 2s infinite;
 }
-.blob.infinity{
-	animation: pulse-blue 2s infinite;
+
+.blob.infinity {
+    animation: pulse-blue 2s infinite;
 }
+
 @keyframes pulse-blue {
-	0% {
-		
-		box-shadow: 0 0 0 0 rgba(189, 5, 162, 0.7);
-	}
-	
-	70% {
-		
-		box-shadow: 0 0 0 10px rgba(189, 5, 162, 0);
-	}
-	
-	100% {		
-		box-shadow: 0 0 0 0 rgba(189, 5, 162, 0);
-	}
+    0% {
+        box-shadow: 0 0 0 0 rgba(189, 5, 162, 0.7);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(189, 5, 162, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(189, 5, 162, 0);
+    }
 }
+
 /* Animation End */
 /* section title-animation start */
-.section-title h3 {
+.section-title h3,
+.section-title h1 {
     position: relative;
     padding-bottom: 15px;
     display: inline-block;
 }
 
-.section-title h3:after {
+.section-title h3:after,
+.section-title h1:after {
     content: "";
     width: 30%;
     height: 5px;
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #B64EC3;
+    background: #b64ec3;
     border-radius: 10px;
-    transition: all .5s cubic-bezier(.78,-.58,.14,1.53);
+    transition: all 0.5s cubic-bezier(0.78, -0.58, 0.14, 1.53);
 }
 
-section:hover .section-title h3:after {
+section:hover .section-title h3:after,
+section:hover .section-title h1:after {
     width: 50%;
 }
+
 /* section title-animation end */
 /* section pattern start */
 .bg-pattern {
@@ -144,15 +165,30 @@ section:hover .section-title h3:after {
     background: url(/img/pattern-bg-01.2.svg), url(/img/pattern-bg-01.3.svg);
     background-position: 100% 50%, 0% 90%;
     background-repeat: no-repeat;
-    opacity: 0.10;
+    opacity: 0.1;
     z-index: -1;
     background-size: 50%;
     background-attachment: fixed;
 }
-.b-strip{
+
+.b-strip {
     position: relative;
 }
-.b-strip:after {position: absolute;width: 100%;content: "";height: 110px;bottom: 0;right: 0;background: url('/img/right-angle.svg');background-repeat: no-repeat;background-size: cover;background-position: bottom right;background-attachment: scroll;z-index: -1;}
+
+.b-strip:after {
+    position: absolute;
+    width: 100%;
+    content: "";
+    height: 110px;
+    bottom: 0;
+    right: 0;
+    background: url("/img/right-angle.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom right;
+    background-attachment: scroll;
+    z-index: -1;
+}
 
 /* section pattern end */
 /* tab start */
@@ -167,7 +203,7 @@ section:hover .section-title h3:after {
     height: 30px;
     right: 10px;
     top: 50%;
-    background: url('/img/tab-arrow.svg');
+    background: url("/img/tab-arrow.svg");
     transform: translateY(-50%);
     background-position: center;
     background-repeat: no-repeat;
@@ -191,65 +227,76 @@ section:hover .section-title h3:after {
     z-index: -1;
     opacity: 0.05;
 }
+
 #tabs-01 .inner-content:after {
-    background: url('/img/tab/01.svg');
+    background: url("/img/tab/01.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-02 .inner-content:after {
-    background: url('/img/tab/02.svg');
+    background: url("/img/tab/02.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-03 .inner-content:after {
-    background: url('/img/tab/03.svg');
+    background: url("/img/tab/03.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-04 .inner-content:after {
-    background: url('/img/tab/04.svg');
+    background: url("/img/tab/04.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-05 .inner-content:after {
-    background: url('/img/tab/05.svg');
+    background: url("/img/tab/05.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-06 .inner-content:after {
-    background: url('/img/tab/06.svg');
+    background: url("/img/tab/06.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-07 .inner-content:after {
-    background: url('/img/tab/07.svg');
+    background: url("/img/tab/07.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
+
 #tabs-08 .inner-content:after {
-    background: url('/img/tab/08.svg');
+    background: url("/img/tab/08.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: bottom right;
 }
-h4.tab-title{
-    position: relative;max-width: 400px;
+
+h4.tab-title {
+    position: relative;
+    max-width: 400px;
 }
+
 h4.tab-title:after {
     content: "";
     width: 100px;
@@ -257,25 +304,29 @@ h4.tab-title:after {
     position: absolute;
     left: 0;
     bottom: 0;
-    background: #B64EC3;
+    background: #b64ec3;
     border-radius: 10px;
-    transition: all .5s cubic-bezier(.78,-.58,.14,1.53);
+    transition: all 0.5s cubic-bezier(0.78, -0.58, 0.14, 1.53);
 }
-.inner-content:hover h4.tab-title:after{
+
+.inner-content:hover h4.tab-title:after {
     width: 150px;
 }
+
 .inner-content img {
-    filter: drop-shadow(5px 4px 2px #B64EC335);
-    -webkit-filter: drop-shadow(5px 4px 2px #B64EC335);
+    filter: drop-shadow(5px 4px 2px #b64ec335);
+    -webkit-filter: drop-shadow(5px 4px 2px #b64ec335);
 }
+
 .tab-content-area {
     min-height: 735px;
     position: relative;
 }
 
-.tab-content-area > div {
+.tab-content-area>div {
     height: 670px;
 }
+
 .tab-content-area:before {
     content: "";
     width: 100%;
@@ -284,69 +335,84 @@ h4.tab-title:after {
     top: 0;
     right: 0;
     background-image: url(/img/pattern-bg-01.2.svg);
-    opacity: 0.10;
+    opacity: 0.1;
     background-position: 100% 30%;
     background-repeat: no-repeat;
     background-size: 60%;
 }
+
 /* tab end */
 /* swiper start */
 .carousel-inner-area .swiper {
     width: 100%;
     height: 100%;
-    padding: 15px 0!important;
-  }
-  
+    padding: 15px 0 !important;
+}
+
 .swiper {
     width: 100%;
     height: 100%;
 }
-  
-  .swiper-slide {
+
+.swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-  
+
     /* Center slide text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .swiper-slide img {
+}
+
+.swiper-slide img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-  .department-info {
+}
+
+.department-info {
     cursor: pointer;
 }
-.swiper-button-next, .swiper-button-prev{
-    color: #B64EC3!important;
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #b64ec3 !important;
 }
-.theme-btn {box-shadow: 0px 1px 5px rgb(182 78 195 / 35%), 0px 3px 6px rgb(182 78 195 / 50%);}
+
+.theme-btn {
+    box-shadow: 0px 1px 5px rgb(182 78 195 / 35%),
+        0px 3px 6px rgb(182 78 195 / 50%);
+}
 
 .theme-btn:hover {
-    box-shadow: 0px 1px 10px rgb(182 78 195 / 75%), 0px 3px 6px rgb(182 78 195 / 85%);
+    box-shadow: 0px 1px 10px rgb(182 78 195 / 75%),
+        0px 3px 6px rgb(182 78 195 / 85%);
 }
+
 /* swiper end */
 /* section title center start */
-.section-title.center-title h3 {
+.section-title.center-title h3,
+.section-title.center-title h1 {
     display: inline-flex;
 }
 
-.section-title.center-title h3:after {
+.section-title.center-title h3:after,
+.section-title.center-title h1:after {
     left: 50%;
     transform: translateX(-50%) scaleX(0.5);
     width: 150px;
 }
 
-section:hover .section-title.center-title h3:after {
+section:hover .section-title.center-title h3:after,
+section:hover .section-title.center-title h1:after {
     width: 250px;
 }
+
 .strip-top {
-    position: relative;overflow: hidden;
+    position: relative;
+    overflow: hidden;
 }
 
 .strip-top::before {
@@ -356,18 +422,20 @@ section:hover .section-title.center-title h3:after {
     position: absolute;
     left: 0;
     top: -10px;
-    background: url('/img/strip-top.svg');
+    background: url("/img/strip-top.svg");
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: scroll;
 }
+
 /* section title center end */
 /* drBooking */
 .bg-icon {
     display: flex;
     justify-content: flex-end;
 }
+
 /* drBooking end */
 /* fb-info */
 .blob-bottom {
@@ -395,6 +463,7 @@ section:hover .section-title.center-title h3:after {
     z-index: 1;
     background-position: top left;
 }
+
 .facebook-page-info:after {
     content: "";
     position: absolute;
@@ -410,9 +479,10 @@ section:hover .section-title.center-title h3:after {
     background-attachment: scroll;
     filter: drop-shadow(2px 4px 6px black);
 }
+
 .facebook-page-info {
     overflow: hidden;
-    background: url('/img/fb-background.svg');
+    background: url("/img/fb-background.svg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -423,6 +493,7 @@ section:hover .section-title.center-title h3:after {
     position: relative;
     z-index: 2;
 }
+
 /* fb-info end */
 .play-btn img {
     filter: drop-shadow(2px 4px 6px #33333335);
@@ -432,37 +503,47 @@ section:hover .section-title.center-title h3:after {
 .play-btn a:hover img {
     filter: drop-shadow(2px 4px 6px #33333365);
 }
+
 .fb-info-area img {
     filter: drop-shadow(2px 4px 6px #33333345);
 }
+
 .arrow-btn:hover svg {
     animation: arrow-r 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
+
 .arrow-btn-back:hover svg {
     animation: arrow-l 1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
 }
-@keyframes arrow-r{
-    0% { 
+
+@keyframes arrow-r {
+    0% {
         left: 8px;
     }
+
     50% {
         left: 13px;
     }
+
     100% {
         left: 8px;
     }
-}  
-@keyframes arrow-l{
-    0% { 
+}
+
+@keyframes arrow-l {
+    0% {
         right: 8px;
     }
+
     50% {
         right: 13px;
     }
+
     100% {
         right: 8px;
     }
-}  
+}
+
 /* contact */
 .contact-title {
     position: relative;
@@ -481,10 +562,12 @@ section:hover .section-title.center-title h3:after {
     opacity: 0;
     transition: 250ms;
 }
-.info-box:hover .contact-title:after{
+
+.info-box:hover .contact-title:after {
     width: 100%;
     opacity: 1;
 }
+
 .info-box:hover .icon-area svg path {
     fill: #b64ec3;
 }
@@ -492,6 +575,7 @@ section:hover .section-title.center-title h3:after {
 .info-box .icon-area svg path {
     transition: 250ms;
 }
+
 .contact-us {
     position: relative;
     /* background-image: url(/img/pattern-bg-02.svg); */
@@ -500,13 +584,16 @@ section:hover .section-title.center-title h3:after {
     background-attachment: scroll;
     background-position: top left;
 }
+
 /* contact end */
 .fb-info-area h5 {
     text-shadow: 1px 3px 6px #3b3b3b6e;
 }
+
 .d-detail .title {
     position: relative;
-    margin-bottom: 15px;display: inline-block;
+    margin-bottom: 15px;
+    display: inline-block;
 }
 
 .d-detail .title:after {
@@ -523,10 +610,12 @@ section:hover .section-title.center-title h3:after {
 .single-department:hover .d-detail .title:after {
     width: 100%;
 }
+
 .qr-code {
     display: inline-block;
     text-align: center;
 }
+
 /* doctor profile */
 .doc-title {
     position: relative;
@@ -544,10 +633,12 @@ section:hover .section-title.center-title h3:after {
     background: var(--primary);
     border-radius: 6px;
 }
+
 .doc-r {
     border-left: 1px solid rgb(182 78 195 / 75%);
     padding-left: 30px;
 }
+
 /* doctor profile end */
 /* go to top start */
 
@@ -562,66 +653,44 @@ section:hover .section-title.center-title h3:after {
     cursor: pointer;
     opacity: 100%;
     transition: opacity 0.5s;
-  }
-  
-  .back-to-top:hover {
+}
+
+.back-to-top:hover {
     opacity: 60%;
-  }
-  
-  .hide{
+}
+
+.hide {
     opacity: 0%;
-  }
-  
-  .back-to-top-icon {
+}
+
+.back-to-top-icon {
     width: 1rem;
     height: 1rem;
     color: #ffffff;
-  }
-  
-  .progress-bar {
+}
+
+.progress-bar {
     height: 2px;
     background: rgb(182 78 195 / 50%);
     position: fixed;
     top: 0;
     left: 0;
-  }
+}
+
 /* go to top end */
 
-.edu-info-inner {
-    position: relative;
-    padding-left: 50px;
-}
-
-.edu-info-inner:before {
-    content: "";
-    width: 2px;
-    height: 100%;
-    position: absolute;
-    left: 12px;
-    top: 0;
-    background: #b64ec3;
-}
-.edu-info-inner:after {
-    content: "";
-    position: absolute;
-    width: 25px;
-    height: 25px;
+.footer-link li a {
     left: 0;
-    top: 0;
-    background: #b64ec3;
-    transform: rotate(45deg);
-    border-radius: 4px;
+    position: relative;
+    transition: 300ms;
 }
-.data-\[te-nav-active\]\:active-tab[data-te-nav-active]
-{
-    background-color: var(--primary);    
-}
-.data-\[te-nav-active\]\:active-tab[data-te-nav-active] svg path, .tab-nav:hover svg path 
-{
-    fill: white;    
-}
-@media only screen and (max-width: 1023.99px) {
 
+.footer-link li:hover a {
+    left: 10px;
+    color: var(--primary);
+}
+
+@media only screen and (max-width: 1023.99px) {
     #nav ul li {
         margin: 10px 0;
     }
@@ -630,31 +699,40 @@ section:hover .section-title.center-title h3:after {
         padding-top: 20px;
     }
 }
+
 @media only screen and (max-width: 768px) {
-    .facebook-page-info:after, .facebook-page-info:before{
+
+    .facebook-page-info:after,
+    .facebook-page-info:before {
         display: none;
     }
+
     .play-btn {
         margin-bottom: 60px;
     }
+
     .department-carousel {
         padding-top: 60px;
         padding-bottom: 80px;
     }
+
     .tab-content-area {
         min-height: unset;
     }
-    
-    .tab-content-area > div {
+
+    .tab-content-area>div {
         height: unset;
     }
+
     .doc-r {
         border-left: none;
         padding-left: 0;
     }
+
     .doc-r {
         width: 100%;
     }
+
     .doc-title:after {
         left: 50%;
         transform: translateX(-50%);

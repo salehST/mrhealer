@@ -1,16 +1,6 @@
 import Head from "next/head";
-import Image from "next/image";
 import { Poppins } from "next/font/google";
-import Slider from "../../components/Slider";
-import WhyUs from "../../components/WhyUs";
-import OfferTab from "../../components/OfferTab";
-import Carousel from "../../components/Carousel";
-import DrBooking from "../../components/DrBooking";
-import TestMedicine from "../../components/TestMedicine";
-import CustomerSupport from "../../components/CustomerSupport";
-import FaceBook from "../../components/FaceBook";
-import Faq from "../../components/Faq";
-import Script from "next/script";
+import LandingPage from "./home";
 
 const poppins = Poppins({
   weight: "400",
@@ -44,40 +34,10 @@ export default function Home() {
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
         <meta name="theme-color" content="#ffffff"></meta>
         <link rel="icon" href="/favicon.ico" />
-        {/* <script src="/js/main.js"></script> */}
-        {/* <script>
-{`      const navLinks = document.querySelectorAll("#nav a");
 
-        for (const link of navLinks) {
-        link.addEventListener("click", clickHandler);
-        }
-
-        function clickHandler(e) {
-        e.preventDefault();
-        const href = this.getAttribute("href");
-        const offsetTop = document.querySelector(href).offsetTop;
-
-        scroll({
-            top: offsetTop,
-            behavior: "smooth"
-        });
-        }`}
-    </script> */}
-      {/* <script
-    async
-    src="https://www.youtube.com/iframe_api"
-   /> */}
       </Head>
       <main className={poppins.className}>
-        <Slider />
-        <WhyUs />
-        <OfferTab  />
-        <Carousel />
-        <DrBooking />
-        <TestMedicine />
-        <CustomerSupport />
-        <FaceBook />
-        <Faq />
+          <LandingPage />
       </main>
 
       <script src={"/js/main.js"} defer ></script>

@@ -1,10 +1,13 @@
 import '@/styles/globals.css'
 import 'aos/dist/aos.css';
+import "../styles/_app.scss";
+
 import AOS from 'aos';
 import React, {useEffect} from 'react';
-import Contact from '../../components/Contact';
-import Footer from '../../components/Footer';
-import Navbar from '../../components/Navbar';
+import Contact from '../../components/common/Contact';
+import Footer from '../../components/common/Footer';
+import Navbar from '../../components/common/Navbar';
+
 
 export default function MyApp({ Component, pageProps } = AppProps) {
   useEffect(() => {

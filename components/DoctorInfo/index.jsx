@@ -3,8 +3,63 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 const DoctorInfo = ({doctor , review, educations, experiences}) => {
-  return (     <div>
-     <div className='doc-info-inner p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition mb-12'>
+    console.log(doctor)
+    console.log(review)
+    const work = doctor.current_workplace;
+    const currentWork = work.replace(/amp;/g, ' ');
+    const about = doctor.profile_description;
+    const aboutDoc = about.replace(/amp;/g, ' ');
+    const degree = doctor.degree;
+    const docDegree = degree.replace(/amp;/g, ' ');
+  return (
+    <>
+    <style jsx>
+      {
+        `
+        .edu-info-inner {
+          position: relative;
+          padding-left: 50px;
+      }
+      
+      .edu-info-inner:before {
+          content: "";
+          width: 2px;
+          height: 100%;
+          position: absolute;
+          left: 12px;
+          top: 0;
+          background: #b64ec3;
+      }
+      .edu-info-inner:after {
+          content: "";
+          position: absolute;
+          width: 25px;
+          height: 25px;
+          left: 0;
+          top: 0;
+          background: #b64ec3;
+          transform: rotate(45deg);
+          border-radius: 4px;
+      }
+      .data-\[te-nav-active\]\:active-tab[data-te-nav-active]
+      {
+          background-color: var(--primary);    
+      }
+      .data-\[te-nav-active\]\:active-tab[data-te-nav-active] svg path, .tab-nav:hover svg path 
+      {
+          fill: white;    
+      }
+          .doc-degree {
+            word-break: break-word;
+        }
+         
+        `
+      }
+    </style>
+          <div
+        
+        className="doc-info-inner p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition mb-12"
+      >
         <div className="single-doc-info flex flex-col md:flex-row gap-4 items-stretch justify-between">
           <div className="profile-left flex-col md:flex-row gap-4 flex items-center justify-start w-full md:w-4/6">
             <div>
@@ -39,18 +94,18 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                </Link>
              </div>
             </div>
-            <div className="doc-details flex shrink flex-col gap-4 items-center md:items-start justify-start lg:justify-evenly w-auto">
+            <div className="doc-details flex shrink flex-col md:gap-4 items-center md:items-start justify-start lg:justify-evenly w-auto">
               
-            <h3 className="doc-title text-center md:text-left text-[#2F2F2F] text-2xl lg:text-5xl font-semibold">
+            <h3 className="doc-title text-center md:text-left text-[#2F2F2F] text-2xl lg:text-5xl font-semibold ">
                   {doctor.name}
                 </h3>
-              <div className="top-part text-center md:text-left">
-                <h4 className="doc-degree text-[#2F2F2F] text-base font-normal flex-wrap">
-                  {doctor.degree}
+              <div className="top-part mt-3 md:mt-0 text-center md:text-left">
+                <h4 className="doc-degree text-[#2F2F2F] text-sm md:text-base font-normal flex-wrap">
+                  {docDegree}
                   
                 </h4>
                 
-                <p className='my-2 text-[#2F2F2F] text-base font-normal'>Working at {doctor.current_workplace}</p>
+                <p className='my-2 text-[#2F2F2F] text-sm md:text-base font-normal'>Working at {currentWork}</p>
 
               </div>
               <div className="bottom-part">
@@ -65,7 +120,7 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                       (incl. VAT)
                     </span>
                   </div>
-                  <h6 className='text-[#2F2F2F] text-xl font-normal'>{doctor.dept_name}</h6>
+                  <h6 className='text-[#2F2F2F] text-base md:text-lg text-center md:text-left font-normal'>Specialized in {doctor.dept_name} Department</h6>
               </div>
             </div>
           </div>
@@ -257,7 +312,7 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                         
                       <div className="">
                         <div className=" text-[#2F2F2F] text-xl font-medium">About Doctor:</div>
-                        <span className=' text-[#2F2F2F] text-base font-normal'>{doctor.profile_description}</span>
+                        <span className=' text-[#2F2F2F] text-base font-normal'>{aboutDoc}</span>
                       </div>
                       </div>
                       <div className="flex flex-col w-full">
@@ -300,10 +355,10 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                 <div className="education-info">
                   <div className="inner-area">
 
-                  {educations.length > 0 && (
+                  {educations.length > 0 ? (
                       <div className='edu-info  flex flex-col-reverse'>
                         {educations.map((education, index) => (
-                          <div key={index}  id={education.doctor_education_id} className='px-6 bg-white'>
+                          <div key={index} id={education.doctor_education_id} className='px-6 bg-white'>
                             <div className="edu-info-inner pb-6">
                               <div className="shadow hover:shadow-md border border-gray-100 rounded transition p-4">
                                   <h4 className='text-[#2F2F2F] text-base font-normal mb-1'>Institution: <br /> <span className='text-[#2F2F2F] text-base font-bold'>{education.institute}</span></h4>
@@ -314,6 +369,8 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                           </div>
                         ))}
                       </div>
+                    ) : (
+                      <p>No Data added</p>
                     )}
                   </div>
                 </div>
@@ -325,7 +382,7 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                 aria-labelledby="tabs-exp-tab01">
                 <div className="experience-info-area">
                   <div className="exp-info flex flex-col-reverse">
-                  {experiences.length > 0 && (
+                  {experiences.length > 0 ? (
                             <>
                             {experiences.map((exp, index) => (
                               <div key={index} id={exp.doctor_experience_id} className='px-6 bg-white'>
@@ -338,14 +395,11 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                                         {exp.start_year} - {exp.end_year}</span></p>
                                     </div>
                                 </div>
-                              <h2></h2>
-                              <h3></h3>
-                              <p></p>
-                              <p></p>
-                              <p></p>
                             </div>
                             ))}
                             </>
+                          ) : (
+                            <p>No Experience Added.</p>
                           )}
                   </div>
                 </div>
@@ -358,11 +412,13 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                 <div className="review-wrapper">
                   <div className='text-[#2F2F2F] text-xl font-normal mb-7'>Recent Reviews:</div>
                   <div className="review-inner-area">
-                  {review && (
+                  {review.length > 0 ? (
                   <>
-                  {review.map((el,index) => (
+                  {review.map((el, index) => {
                    
-            
+                    const dateParts = el.createdAt.split('T')[0].split('-');
+                    const formattedDate = `${dateParts[2]}-${dateParts[1]}-${dateParts[0]}`;
+                    return (
                     <div key={index} id={el.doctor_review_id} className="single-review p-6 bg-[#fbfbfb] shadow hover:shadow-md rounded-md border-gray-600 transition mb-4">
                         <div className="profile-top flex justify-between items-center mb-6">
                           <div className="flex items-center justify-start gap-3">
@@ -387,7 +443,7 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
                             </div>
                             <div className="flex flex-col">{el.name} <span className=' text-gray-400'>@mrHealer</span></div>
                           </div>
-                          <div className="rating-left">
+                          <div className="rating-left text-right">
                             
                             <span className="flex items-center justify-end">
                             {[...Array(Math.floor(el.rating))].map((_, index) => (
@@ -402,15 +458,17 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
 ))}
 <span className='ml-1 mt-1'>{el.rating}.0</span>
 </span>
-                            <span>{el.createdAt}</span>
+                            <span>{formattedDate}</span>
                           </div>
                         </div>
                         <div className="review-text capitalize">
                           {el.text}
                         </div>
                     </div>
-                          ))}
+                          )})}
                           </>
+                      ) : (
+                        <p>Has No Reviews</p>
                       )}
                   </div>
                   
@@ -420,8 +478,10 @@ const DoctorInfo = ({doctor , review, educations, experiences}) => {
               </div>
             </div>
         </div>
-      </div>     
-       </div>
+      </div>
+      
+       
+  </>
   )
 }
 

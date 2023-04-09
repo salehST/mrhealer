@@ -1,0 +1,97 @@
+[ 
+        {
+        "id" : "01", 
+        "question" : "What is telemedicine?", 
+        "answer" : "<span class='text-primary font-semibold'>Telemedicine</span> is the practice of providing medical care and consultation remotely using technology, such as video conferencing, phone calls, and messaging."
+        }, 
+        {
+        "id" : "02", 
+        "question" : "How does telemedicine work?", 
+        "answer" : "<span class='text-primary font-semibold'>Telemedicine</span> works by allowing patients to communicate with healthcare providers through secure online platforms, video conferencing, or phone calls. Patients can receive diagnosis, treatment, and prescription through telemedicine."
+        },
+        {
+        "id" : "03", 
+        "question" : "What types of medical conditions can be treated through telemedicine?", 
+        "answer" : "<span class='text-primary font-semibold'>Telemedicine</span> can be used to treat a wide range of medical conditions, including minor illnesses, chronic conditions, and mental health issues. It is not suitable for emergencies or life-threatening conditions that require immediate attention."
+        },
+        {
+        "id" : "04", 
+        "question" : "How do I schedule an appointment?", 
+        "answer" : "To schedule an appointment, check out the Doctor Booking segment of the website."
+        },
+        {
+        "id" : "05", 
+        "question" : "What equipment do I need to participate in a telemedicine appointment?", 
+        "answer" : "You will typically need a smartphone or smart device supporting Mr. Healer app and a secure internet connection to participate in an online appointment."
+        },
+        {
+        "id" : "06", 
+        "question" : "Is telemedicine secure and private?", 
+        "answer" : "<span class='text-primary font-semibold'>Telemedicine</span> platforms are designed to be secure and private, with encryption and other measures to protect patient data. However, it is important to use a secure and private internet connection and to ensure that no one else can access the device being used for the appointment."
+        },
+        {
+        "id" : "07", 
+        "question" : "How do I pay for an appointment?", 
+        "answer" : "Payment for an appointment can be done through mobile banking and bank account. You'll be redirected to the payment procedure directly while using the app when you're taking an appointment."
+        },
+        {
+        "id" : "08", 
+        "question" : "Can I get a prescription through the Mr. Healer app?", 
+        "answer" : "Yes, along with online consultation we are offering digital prescriptions prepared by the doctor which you can print as well if you need. Prescriptions will be stored in your app for lifetime so no fear of losing your valuable prescription."
+        },
+        {
+        "id" : "09" , 
+        "question" : "Can telemedicine be used for emergency medical situations?", 
+        "answer" : "<span class='text-primary font-semibold'>Telemedicine</span> is not intended for emergency medical situations. Patients experiencing a medical emergency should go to the nearest emergency room."
+        },
+        {
+        "id" : "10" , 
+        "question" : "How to contact Mr. Healer customer care ?", 
+        "answer" : "You can contact us via our hotline number provided in the contact information section for any query or complaint. You can also reach us through our facebook page or directly calling through our app or through email."
+        },
+        {
+        "id" : "11" , 
+        "question" : "How does the app work?", 
+        "answer" : "Signing up for our app provides easy access to a wide range of healthcare options. Simply use the service's search tools to choose a doctor who fits your needs, then pay as you go for an on-demand consultation (Instant Live Doctor or Scheduled Online Specialist). The doctor will call you via the Mr. Healer app on time. The next step is to retrieve your doctor's submitted prescription and then to acquire the necessary treatment or diagnostics. Maintain regular doctor visits and take all prescribed medications until you feel well. You can also take an appointment and consult with the doctor in his offline chamber (Available for Selected Doctors). You have 24/7 access to a variety of medical services, such as booking a pathology test or medicine home delivery."
+        },
+        {
+        "id" : "12" , 
+        "question" : "Do you provide any diagnostic tests facilities?", 
+        "answer" : "Yes, Mr. Healer provides diagnostic tests facilities."
+        },
+        {
+        "id" : "13" , 
+        "question" : "Do you have a medicine delivery service?", 
+        "answer" : "Yes, we have a medicine home delivery service. Upload the picture of your prescription or search medicine and order online. One of our “A Grade Pharmacists” will confirm your order via call and get your medicine at your door within 18 to 48 hours. For a detailed procedure check out the Test and Medicine segment."
+        },
+        {
+        "id" : "14" , 
+        "question" : "What if I miss a Doctor's call during the scheduled time?", 
+        "answer" : "If a doctor can not consult a Patient due to any reason within 60 minutes of Initiation Request, then we shall ask for a convenient  time from the patient thus we can reschedule the appointment time. If a patient is not interested to reschedule the time or change the doctor as per our suggestion then the user will get a full refund. \n\n But if a patient fails to join the video consultation on time according to the appointment schedule due to own problem and network issue, Mr. Healer will not be liable for that. In that case, we may ask the doctor to consider the patient’s problem and give another schedule, but it is the doctor’s choice whether he or she will reschedule the appointment or not. Whatever the doctor’s decision is, the patient will get NO REFUND from Mr. Healer in this case."
+        },
+        {
+        "id" : "15" , 
+        "question" : "If I can't attend the doctor's call will I get a refund?", 
+        "answer" : "If a patient fails to join the video consultation on time according to the appointment schedule due to own problem and network issue, Mr. Healer will not be liable for that. In that case, we may ask the doctor to consider the patient’s problem and give another schedule, but it is the doctor’s choice whether he or she will reschedule the appointment or not. Whatever the doctor’s decision is, the patient will get NO REFUND from Mr. Healer in this case."
+        },
+        {
+        "id" : "16" , 
+        "question" : "Do you have any physical hospital or diagnostic center?", 
+        "answer" : "No, we don't have any physical hospital or diagnostic center."
+        },
+        {
+        "id" : "17" , 
+        "question" : "How can I register myself as a physician in the Mr. Healer app?", 
+        "answer" : "If you are a BMDC registered doctor, go to the play store or use the following link <a class='text-primary' href='https://play.google.com/store/apps/details?id=com.healer.doctor' target='_blank'>https://play.google.com/store/apps/details?id=com.healer.doctor</a> to download Mr. Healer DR (Only for Doctors) App. Give the authentic required information and submit the documents, our customer care team will reach you out within a short time. You can also contact us via email to get registered."
+        },
+        {
+        "id" : "18" , 
+        "question" : "Do you provide any health care package for corporate service?", 
+        "answer" : "N/A"
+        },
+        {
+        "id" : "19" , 
+        "question" : "How can I order a pathology test?", 
+        "answer" : "What you need to do is Order Tests and Provide Sample. Once you've booked a test, we'll collect samples from your doorstep and your report will be delivered within the shortest possible time through email or sending the report at your doorstep. For a detailed procedure check out the Test and Medicine segment."
+        }
+    ]

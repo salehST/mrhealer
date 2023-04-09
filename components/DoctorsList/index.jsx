@@ -15,14 +15,18 @@ const DoctorsList = ({
 }) => {
   return (
     <>
-      <div
-        key={doctor_id}
-        className="doc-info-inner p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition mb-6"
-      >
-        <div className="single-doc-info flex flex-col md:flex-row gap-4 items-center justify-between">
-          <div className="profile-left flex gap-4 items-start sm:items-center justify-start w-full md:w-3/5">
-            <div>
-              <div className="profile-img rounded-md overflow-hidden basis-36 h-36 w-36">
+      <style jsx>
+        {`
+          .doc-degree {
+            word-break: break-word;
+          }
+        `}
+      </style>
+      <div className="doc-info-inner p-6 bg-white shadow-md rounded-lg hover:shadow-lg transition mb-6">
+        <div className="single-doc-info flex flex-col md:flex-row items-center justify-between">
+          <div className="profile-left flex flex-col md:flex-row gap-4 items-start justify-center md:items-center md:justify-start  mb-3 md:mb-0 w-full md:w-1/2 lg:w-3/5">
+            <div className="mx-auto md:mx-0">
+              <div className="profile-img rounded-md overflow-hidden basis-36 mx-auto md:mx-0 h-36 w-36">
                 <Image
                   src={`https://healerspc.sgp1.digitaloceanspaces.com/media/profile_pictures/${profile_picture}`}
                   width={200}
@@ -31,31 +35,21 @@ const DoctorsList = ({
                   alt="picture"
                 />
               </div>
-              <div className="bottom-part block mt-2 sm:hidden">
-                <h4 className="text-[#2F2F2F] text-sm font-normal mb-1">
-                  Specialties
-                </h4>
-                <div className="doc-department">
-                  <span className="depart-name bg-primary text-white rounded-md px-1.5 py-1 text-xs">
-                    {dept_name}
-                  </span>
-                </div>
-              </div>
             </div>
-            <div className="doc-details flex shrink flex-col gap-4 items-start justify-start sm:justify-evenly w-auto">
-              <div className="top-part">
+            <div className="doc-details flex flex-col gap-4 items-center md:items-start justify-center w-full md:justify-evenly md:w-auto">
+              <div className="top-part text-center md:text-left">
                 <h3 className="doc-title text-[#2F2F2F] text-xl font-bold">
                   {name}
                 </h3>
-                <h4 className="doc-degree text-[#2F2F2F] text-sm font-normal flex-wrap">
+                <h4 className="doc-degree text-[#2F2F2F] text-sm font-normal flex flex-wrap">
                   {degree}
                 </h4>
               </div>
-              <div className="bottom-part hidden sm:block">
-                <h4 className="text-[#2F2F2F] text-sm font-normal mb-1">
+              <div className="bottom-part">
+                <h4 className="text-[#2F2F2F] text-sm font-normal md:mb-1">
                   Specialties
                 </h4>
-                <div className="doc-department">
+                <div className="doc-department text-center md:text-left">
                   <span className="depart-name bg-primary text-white rounded-md px-1.5 py-1 text-xs">
                     {dept_name}
                   </span>
@@ -63,7 +57,7 @@ const DoctorsList = ({
               </div>
             </div>
           </div>
-          <div className="profile-right-info flex flex-col md:flex-row gap-3 md:gap-6 items-start justify-start md:items-center md:justify-evenly w-full md:w-2/5">
+          <div className="profile-right-info flex flex-col md:flex-row gap-3 md:gap-3 lg:gap-6 items-start justify-start md:items-center md:justify-evenly w-full md:w-1/2 lg:w-2/5">
             <div className="doc-r flex flex-row md:flex-col justify-between gap-2">
               <div className="flex flex-col mb-4">
                 <span className="text-[#2F2F2F] text-sm font-normal">
@@ -105,7 +99,7 @@ const DoctorsList = ({
               </div>
             </div>
             <div className="doc-r flex flex-col border-t border-primary md:border-t-0 pt-4 md:pt-0 sm:flex-row md:flex-col gap-2">
-              <div className="">
+              <div className=" w-full sm:w-1/2 md:w-full">
                 <h6 className="text-[#2F2F2F] text-base font-normal">
                   Consultation Fee
                 </h6>
@@ -116,10 +110,10 @@ const DoctorsList = ({
                   (incl. VAT)
                 </span>{" "}
               </div>
-              <div className="btn-area mt-2">
+              <div className="btn-area mt-2 w-full sm:w-1/2 md:w-full">
                 <Link
                   href={`/doctors/profile/${doctor_id}`}
-                  className="text-white text-base font-normal flex items-center justify-between px-3 py-1.5  bg-primary rounded-md shadow gap-2 mb-3 hover:bg-[#c955d8] hover:shadow-lg transition"
+                  className="text-white text-base font-normal flex items-center justify-between px-3 py-1.5  bg-primary rounded-md shadow min-w-max gap-2 mb-3 hover:bg-[#c955d8] hover:shadow-lg transition"
                 >
                   <span>View Profile</span>{" "}
                   <svg
@@ -136,8 +130,9 @@ const DoctorsList = ({
                   </svg>
                 </Link>
                 <Link
-                  href="https://play.google.com/store/apps/details?id=com.healer.patient" target={"_blank"}
-                  className="text-white text-base font-normal flex items-center justify-between px-3 py-1.5  bg-primary rounded-md shadow w-full gap-2 hover:bg-[#c955d8] hover:shadow-lg transition"
+                  href="https://play.google.com/store/apps/details?id=com.healer.patient"
+                  target={"_blank"}
+                  className="text-white text-base font-normal flex items-center justify-between px-3 py-1.5  bg-primary rounded-md shadow w-full  min-w-max  gap-2 hover:bg-[#c955d8] hover:shadow-lg transition"
                 >
                   <span>See Doctor Now</span>{" "}
                   <svg

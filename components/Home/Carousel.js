@@ -28,19 +28,39 @@ const Carousel = () => {
         setError("An error occurred while fetching data.");
       });
   }, []);
-  // const apiData = Object.entries(myData);
-  // let departmentData = []
-  // for ( let value of Object.values(apiData)){
-  //     departmentData = Object.entries(value)[1][1]
-  // }
   return (
     <>
+
+    <style>
+      {
+        `
+        .carousel-inner-area .swiper-button-next:after, .carousel-inner-area .swiper-button-prev:after {
+          font-size: 16px;
+        }
+        .carousel-inner-area .swiper-button-next, .carousel-inner-area .swiper-button-prev {
+          width: 35px;
+          height: 35px;
+          background: transparent;
+          border-radius: 50%;
+          border: 1px solid;
+          transition: 300ms;         
+        color: var(--primary);
+      }
+      .carousel-inner-area .swiper-button-next:hover, .carousel-inner-area .swiper-button-prev:hover {
+        background: var(--primary);
+        border-color: var(--primary);
+        color: #fff;
+        
+    }
+        `
+      }
+    </style>
       <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-12 department-carousel strip-top b-strip">
         <div className="container mx-auto max-w-screen-xl">
           {/* <!-- container start --> */}
           <div
             data-aos="fade-up"
-            className="section-title center-title text-center mb-8"
+            className="section-title center-title text-center mt-6 mb-8"
           >
             <h3 className="capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto">
               our Specialty
@@ -53,7 +73,7 @@ const Carousel = () => {
             ) : (
               <Swiper
                 slidesPerView={4}
-                spaceBetween={30}
+                spaceBetween={20}
                 autoplay={true}
                 loop={true}
                 breakpoints={{
@@ -63,11 +83,11 @@ const Carousel = () => {
                   },
                   "@0.75": {
                     slidesPerView: 3,
-                    spaceBetween: 20,
+                    spaceBetween: 10,
                   },
                   "@1.00": {
                     slidesPerView: 4,
-                    spaceBetween: 40,
+                    spaceBetween: 20,
                   },
                 }}
                 navigation={true}

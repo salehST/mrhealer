@@ -1,28 +1,44 @@
-import Axios from "axios";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Head from "next/head";
+import useSWRInfinite from "swr/infinite";
 
 import DoctorsList from "../../../components/DoctorsList";
 
+const PAGE_SIZE = 10;
 const AvailableDoctors = () => {
+ 
   const apiUrl = typeof window !== "undefined" ? process.env.API_URL : "";
   const router = useRouter();
   const { id } = router.query;
-  const [myData, setData] = useState([]);
-  const [error, setError] = useState(null);
-  useEffect(() => {
-    id &&
-      Axios.get(`${apiUrl}/profile/doctor/all?dept_id=${id}`)
-        .then((res) => {
-          setData(res.data.doctors);
-        })
-        .catch((err) => {
-          console.log(err.data.doctors);
-          setError("An error occurred while fetching data.");
-        });
-  }, [id]);
+
+  const fetcher = async (url) => {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data.doctors;
+  };
+
+  const getKey = (pageIndex, previousPageData) => {
+    if (previousPageData && !previousPageData.length) return null; // reached the end
+    return `${apiUrl}/profile/doctor/all?dept_id=${id}&all=1&page=${
+      pageIndex + 1
+    }&limit=${PAGE_SIZE}`;
+  };
+
+  const { data, error, size, setSize } = useSWRInfinite(getKey, fetcher);
+
+  const doctors = data ? [].concat(...data) : [];
+  const isLoadingInitialData = !data && !error;
+  const isLoadingMore =
+    isLoadingInitialData ||
+    (size > 0 && data && typeof data[size - 1] === "undefined");
+  const isReachingEnd =
+    isLoadingMore || (data && data[data.length - 1]?.length < PAGE_SIZE);
+
+  const handleLoadMore = () => {
+    setSize(size + 1);
+  };
 
   return (
     <>
@@ -42,7 +58,7 @@ const AvailableDoctors = () => {
             <p className="text-red-500">{error}</p>
           ) : (
             <div className="doctors-info-area">
-              {myData.map((doctors, index) => {
+              {doctors.map((doctors, index) => {
                 const {
                   doctor_id,
                   name,
@@ -67,14 +83,27 @@ const AvailableDoctors = () => {
                     dept_name={dept_name}
                     experience={experience}
                   />
+
+                  
                 );
               })}
             </div>
+            
           )}
-
+         {!isReachingEnd && (
+            <div className="text-center">
+              <button
+                className="bg-primary hover:bg-[#26b024] text-white font-normal duration-300 transition  my-2 py-2 px-4 rounded-md shadow hover:shadow-md"
+                onClick={handleLoadMore}
+                disabled={isLoadingMore}
+              >
+                {isLoadingMore ? "Loading..." : "Show More Doctors"}
+              </button>
+            </div>
+          )}
           <Link
             href={"/departments"}
-            className="arrow-btn-back text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 dark:text-primary-400 dark:hover:text-primary-500 dark:focus:text-primary-500 dark:active:text-primary-600 flex justify-center underline my-8"
+            className="arrow-btn-back text-primary transition duration-150 ease-in-out hover:text-primary-600 focus:text-primary-600 active:text-primary-700 flex justify-center md:justify-end underline my-8"
           >
             <svg
               width="20"

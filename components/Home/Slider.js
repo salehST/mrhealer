@@ -12,6 +12,56 @@ import { Navigation, Autoplay, EffectFade } from "swiper";
 
 const Slider = () => {
   return (
+<>
+    <style>
+      {
+        `
+
+      .banner-area  .swiper-button-prev, .banner-area .swiper-rtl .swiper-button-next {
+          left: 0;
+          right: auto;
+          background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+          background: -moz-linear-gradient(left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
+          background: -webkit-linear-gradient(left, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
+          transition: 300ms;
+          opacity: 0.75;
+      }
+      .banner-area  .swiper-button-prev:hover, .banner-area .swiper-rtl .swiper-button-next:hover {
+        opacity: 1;
+      }
+      .banner-area  .swiper-button-next, .banner-area .swiper-rtl .swiper-button-prev {
+          right: 0;
+          left: auto;
+          background: -moz-linear-gradient(left, rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right, rgba(0,0,0,0) 0%,rgba(0,0,0,0.35) 100%); 
+      
+      transition: 300ms;
+      opacity: 0.75;
+      }
+      .banner-area  .swiper-button-next:hover, .banner-area .swiper-rtl .swiper-button-prev:hover {
+        opacity: 1;
+      }
+      .banner-area   .swiper-button-next:after, .banner-area .swiper-button-prev:after {
+          font-size: 20px;
+      }
+      .banner-area   .swiper-button-next, .banner-area .swiper-button-prev {
+          top: 50%;
+          width: 45px;
+          height: 100%;
+          margin-top: 0;
+          transform: translateY(-50%);
+          transition: 300ms;
+      }
+      .banner-area .swiper-button-next,
+      .banner-area .swiper-button-prev {
+          color: #c9c9c9!important;
+      }
+    
+        `
+      }
+    </style>
+
     <div className="banner-area">
       <Swiper
         slidesPerView={1}
@@ -26,6 +76,99 @@ const Slider = () => {
         modules={[Navigation, Autoplay, EffectFade]}
         className="mySwiper"
       >
+        <SwiperSlide>
+          <div className="relative content-slide">
+            <Image
+              priority
+              src="/img/banners/1.jpg"
+              height={650}
+              width={2000}
+              className=" drop-shadow-md"
+              alt="icon"
+            />
+            <div className="content-box container p-4 lg:p-0 flex items-center justify-between mx-auto max-w-screen-xl">
+                <div  data-aos="fade-in-left" className="left-part w-full  sm:w-4/6 md:w-3/5">
+                  <div className="">
+                  <h1 className="text-xs md:text-xl lg:text-4xl text-primary font-bold mb-2 md:mb-4">TREATMENT FOR ALL</h1>
+                  <p className="text-[10px] md:text-xs lg:text-lg font-normal mb-2">Mr. Healer provides round-the-clock service to medical advice from BMDC Registered Doctors for all users, instant live doctors, sample collection for pathology test, medicine home delivery and even offline chamber booking to ensure your wellbeing !</p>
+                  </div>
+                  <div className="btn-box flex min-w-max  items-center justify-between gap-4 mt-1 md:mt-6">
+                  <a
+                  href="https://play.google.com/store/apps/details?id=com.healer.patient"
+                  target="_blank"
+                  className="flex lg:hidden g-play  h-6 w-auto lg:w-[180px] lg:h-[53px]"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={"/img/Google_Play_Store_badge.svg"}
+                    className=""
+                    height={53}
+                    width={180}
+                    alt="google play store button"
+                  />
+                </a>
+                <div className=" hidden md:flex gap-4 items-center justify-start">
+                <span className="text-xs md:text-lg">Follow us on: </span>
+                <div className="s-links flex gap-4 items-center justify-start">
+                <a href="https://www.facebook.com/MrHealerHS" target="_blank" className="">
+                  <span className="flex relative">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BD05A2] opacity-75"></span>
+                      <Image
+                        height={20}
+                        width={20}
+                        className=" h-5 w-5"
+                        src="/img/social/facebook.svg"
+                        alt=""
+                      />
+                    </span></a>
+                    <a href="https://www.youtube.com/@mrhealer" target="_blank" className=""> <span className="flex relative">
+                   
+                    <Image
+                      height={20}
+                      width={20}
+                      className="blob infinity rounded-full h-5 w-5"
+                      src="/img/social/youtube.svg"
+                      alt=""
+                    />
+                    </span></a>
+                    <a href="https://www.instagram.com/mrhealerhs/" target="_blank" className="">
+                    <span className="flex relative">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#BD05A2] opacity-75"></span>
+                     <Image
+                        height={20}
+                        width={20}
+                        className="h-5 w-5"
+                        src="/img/social/instagram.svg"
+                        alt=""
+                      />
+                    </span></a>
+                </div>
+                </div>
+                  </div>
+                </div>
+                <div className="right-part hidden sm:flex items-center justify-end">
+                  <div className="mobile-img flex flex-col h-52 sm:h-72 w-auto md:h-auto md:w-3/4 items-center py-7">
+                 
+                  <Image priority src="/img/mr-healer-app-icon.svg" width={380} height={440} className="flex app-icon p-6" alt="img" />
+                  <a
+                  href="https://play.google.com/store/apps/details?id=com.healer.patient"
+                  target="_blank"
+                  className="hidden lg:flex g-play  h-7 w-auto lg:w-[180px] lg:h-[53px]"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src={"/img/Google_Play_Store_badge.svg"}
+                    className=""
+                    height={53}
+                    width={180}
+                    alt="google play store button"
+                  />
+                </a>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </SwiperSlide>
         <SwiperSlide>
           <a
             href="https://play.google.com/store/apps/details?id=com.healer.patient"
@@ -73,122 +216,7 @@ const Slider = () => {
         </SwiperSlide>
       </Swiper>
     </div>
-    //     <div
-    //   id="carouselExampleCrossfade"
-    //   className="relative"
-    //   data-te-carousel-init
-    //   data-te-carousel-slide>
-    //   <div
-    //     className="absolute inset-x-0 bottom-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
-    //     data-te-carousel-indicators>
-    //     <button
-    //       type="button"
-    //       data-te-target="#carouselExampleCrossfade"
-    //       data-te-slide-to="0"
-    //       data-te-carousel-active
-    //       className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-    //       aria-current="true"
-    //       aria-label="Slide 1"></button>
-    //     <button
-    //       type="button"
-    //       data-te-target="#carouselExampleCrossfade"
-    //       data-te-slide-to="1"
-    //       className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-    //       aria-label="Slide 2"></button>
-    //     <button
-    //       type="button"
-    //       data-te-target="#carouselExampleCrossfade"
-    //       data-te-slide-to="2"
-    //       className="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
-    //       aria-label="Slide 3"></button>
-    //   </div>
-    //   <div
-    //     className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
-    //     <div
-    //       className="relative float-left -mr-[100%] w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-    //       data-te-carousel-fade
-    //       data-te-carousel-item
-    //       data-te-carousel-active>
-    //       <Image width={2000} height={650}
-    //         src="/img/banners/1.png"
-    //         className="block w-full"
-    //         alt="Wild Landscape" />
-    //            {/* <div
-    //         className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-    //         <h5 className="text-xl">Third slide label</h5>
-    //         <p>
-    //           Some representative placeholder content for the third slide.
-    //         </p>
-    //       </div> */}
-    //     </div>
-    //     <div
-    //       className="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-    //       data-te-carousel-fade
-    //       data-te-carousel-item>
-    //       <Image width={2000} height={650}
-    //         src="/img/banners/2.png"
-    //         className="block w-full"
-    //         alt="Camera" />
-    //     </div>
-    //     <div
-    //       className="relative float-left -mr-[100%] hidden w-full !transform-none opacity-0 transition-opacity duration-[600ms] ease-in-out motion-reduce:transition-none"
-    //       data-te-carousel-fade
-    //       data-te-carousel-item>
-    //       <Image width={2000} height={650}
-    //         src="/img/banners/3.png"
-    //         className="block w-full"
-    //         alt="Exotic Fruits" />
-    //     </div>
-    //   </div>
-    //   <button
-    //     className="absolute top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    //     type="button"
-    //     data-te-target="#carouselExampleCrossfade"
-    //     data-te-slide="prev">
-    //     <span className="inline-block h-8 w-8">
-    //       <svg
-    //         xmlns="http://www.w3.org/2000/svg"
-    //         fill="none"
-    //         viewBox="0 0 24 24"
-    //         strokeWidth="1.5"
-    //         stroke="currentColor"
-    //         className="h-6 w-6">
-    //         <path
-    //           strokeLinecap="round"
-    //           strokeLinejoin="round"
-    //           d="M15.75 19.5L8.25 12l7.5-7.5" />
-    //       </svg>
-    //     </span>
-    //     <span
-    //       className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-    //       >Previous</span
-    //     >
-    //   </button>
-    //   <button
-    //     className="absolute top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
-    //     type="button"
-    //     data-te-target="#carouselExampleCrossfade"
-    //     data-te-slide="next">
-    //     <span className="inline-block h-8 w-8">
-    //       <svg
-    //         xmlns="http://www.w3.org/2000/svg"
-    //         fill="none"
-    //         viewBox="0 0 24 24"
-    //         strokeWidth="1.5"
-    //         stroke="currentColor"
-    //         className="h-6 w-6">
-    //         <path
-    //           strokeLinecap="round"
-    //           strokeLinejoin="round"
-    //           d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-    //       </svg>
-    //     </span>
-    //     <span
-    //       className="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
-    //       >Next</span
-    //     >
-    //   </button>
-    // </div>
+    </>
   );
 };
 

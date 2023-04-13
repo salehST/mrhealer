@@ -1,6 +1,6 @@
-import '@/styles/globals.css'
 import 'aos/dist/aos.css';
 import "../styles/_app.scss";
+import '@/styles/globals.css'
 
 import AOS from 'aos';
 import React, {useEffect} from 'react';

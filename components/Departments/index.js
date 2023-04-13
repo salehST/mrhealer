@@ -6,7 +6,7 @@ const DepartmentsApi = ({ dept_id, dept_name, image, dept_desc }) => {
     <>
       <Link href={`/doctors/${dept_id}`}>
         <div className="single-department bg-white p-6 rounded-md shadow-md hover:shadow-lg">
-          <div className="inner-info flex flex-col md:flex-row gap-4 items-center justify-start">
+          <div className="inner-info flex flex-col md:flex-row gap-4 items-start md:items-center justify-start">
             <Image
               src={`https://healerspc.sgp1.digitaloceanspaces.com/media/departments/${image}`}
               alt="icon"

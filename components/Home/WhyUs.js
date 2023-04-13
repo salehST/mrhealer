@@ -8,12 +8,12 @@ const WhyUs = () => {
     <>
       <section
         id="service"
-        className="w-full p-4 pt-0 pb-0 md:pt-20 md:pb-10 bg-pattern b-strip"
+        className="w-full p-4 pt-10 pb-0 md:pt-20 md:pb-10 bg-pattern"
       >
         <div className="container mx-auto max-w-screen-xl">
           {/* <!-- container start --> */}
           <div data-aos="fade-up" className="section-title mb-8">
-            <h3 className="capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold w-auto">
+            <h3 className="capitalize text-3xl md:text-5xl text-[#2F2F2F] font-bold w-auto">
               Why us
             </h3>
           </div>
@@ -22,7 +22,7 @@ const WhyUs = () => {
             data-aos-delay="400"
             className="flex flex-col md:flex-row gap-6 items-center justify-between"
           >
-            <div className="text-[#2F2F2F] text-xl font-normal w-full md:w-1/2">
+            <div className="text-[#2F2F2F] text-base md:text-xl font-normal w-full md:w-1/2">
               <ul className="list-disc list-outside pl-6 space-y-6">
                 <li>Affordable treatment saving time, money and hassle.</li>
                 <li>
@@ -55,7 +55,7 @@ const WhyUs = () => {
                   <Image
                     width={110}
                     height={110}
-                    className="ml-4"
+                    className="ml-4 h-16 w-16 md:h-24 md:w-24"
                     src="/img/play-btn.svg"
                     alt="icon"
                   />
@@ -66,6 +66,12 @@ const WhyUs = () => {
         </div>
         {/* <!-- container end --> */}
       </section>
+      {/* <ModalVideo
+        channel="custom"
+        isOpen={isOpen}
+        url="/videos/offline_booking.mp4"
+        onClose={() => setOpen(false)}
+      /> */}
       <ModalVideo
         channel="youtube"
         isOpen={isOpen}

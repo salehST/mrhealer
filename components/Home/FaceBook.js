@@ -21,14 +21,14 @@ const FaceBook = () => {
             alt="logo"
           />
           <p className="text-white text-lg md:text-2xl font-normal mb-6 md:mb-10">
-            Check out our health tips post and many more
+            Check out our health tip posts and many more
           </p>
           <a
             href="https://www.facebook.com/MrHealerHS"
             target={"_blank"}
             data-te-ripple-init
             data-te-ripple-color="light"
-            className="bg-white rounded-md text-[#E640D4] text-2xl font-medium px-6 py-2 shadow-md hover:shadow-lg transition-shadow"
+            className=" bg-[#b42eb4] rounded-md text-white hover:bg-white hover:text-primary text-2xl font-bold px-6 py-2 shadow-md hover:shadow-lg transition"
           >
             Click Here
           </a>

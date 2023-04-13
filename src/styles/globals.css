@@ -22,6 +22,7 @@ body {
 #nav li a.active-page,
 #nav li a {
     position: relative;
+    text-transform: capitalize;
 }
 
 #nav li a:after {
@@ -211,13 +212,13 @@ section:hover .section-title h1:after {
     background-size: auto;
 }
 
-.tab-content-area .inner-content {
+.tab-content-area .inner-content, #accordion-b .inner-content{
     position: relative;
     z-index: 1;
     height: 100%;
 }
 
-.tab-content-area .inner-content:after {
+.tab-content-area .inner-content:after, #accordion-b .inner-content:after{
     content: "";
     position: absolute;
     width: 100%;
@@ -228,7 +229,7 @@ section:hover .section-title h1:after {
     opacity: 0.05;
 }
 
-#tabs-01 .inner-content:after {
+#tabs-01 .inner-content:after, #collapse-1 .inner-content:after{
     background: url("/img/tab/01.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -236,7 +237,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-02 .inner-content:after {
+#tabs-02 .inner-content:after, #collapse-2 .inner-content:after {
     background: url("/img/tab/02.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -244,7 +245,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-03 .inner-content:after {
+#tabs-03 .inner-content:after, #collapse-3 .inner-content:after {
     background: url("/img/tab/03.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -252,7 +253,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-04 .inner-content:after {
+#tabs-04 .inner-content:after, #collapse-4 .inner-content:after {
     background: url("/img/tab/04.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -260,7 +261,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-05 .inner-content:after {
+#tabs-05 .inner-content:after, #collapse-5 .inner-content:after {
     background: url("/img/tab/05.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -268,7 +269,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-06 .inner-content:after {
+#tabs-06 .inner-content:after, #collapse-6 .inner-content:after {
     background: url("/img/tab/06.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -276,7 +277,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-07 .inner-content:after {
+#tabs-07 .inner-content:after, #collapse-7 .inner-content:after {
     background: url("/img/tab/07.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -284,7 +285,7 @@ section:hover .section-title h1:after {
     background-position: bottom right;
 }
 
-#tabs-08 .inner-content:after {
+#tabs-08 .inner-content:after, #collapse-8 .inner-content:after {
     background: url("/img/tab/08.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -318,7 +319,7 @@ h4.tab-title:after {
     -webkit-filter: drop-shadow(5px 4px 2px #b64ec335);
 }
 
-.tab-content-area {
+.tab-content-area, #accordion-b .inner-content {
     min-height: 735px;
     position: relative;
 }
@@ -327,7 +328,7 @@ h4.tab-title:after {
     height: 670px;
 }
 
-.tab-content-area:before {
+.tab-content-area:before, #accordion-b .inner-content:before {
     content: "";
     width: 100%;
     height: 300px;
@@ -342,11 +343,96 @@ h4.tab-title:after {
 }
 
 /* tab end */
+/* mobile menu */
+
+
+.animated-icon2{
+width: 30px;
+height: 20px;
+position: relative;
+margin: 0px;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .5s ease-in-out;
+-moz-transition: .5s ease-in-out;
+-o-transition: .5s ease-in-out;
+transition: .5s ease-in-out;
+cursor: pointer;
+}
+
+.animated-icon2 span {
+display: block;
+position: absolute;
+height: 3px;
+width: 100%;
+border-radius: 9px;
+opacity: 1;
+left: 0;
+-webkit-transform: rotate(0deg);
+-moz-transform: rotate(0deg);
+-o-transform: rotate(0deg);
+transform: rotate(0deg);
+-webkit-transition: .25s ease-in-out;
+-moz-transition: .25s ease-in-out;
+-o-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+overflow: hidden;
+}
+
+
+.animated-icon2 span {
+background: var(--primary);
+}
+
+.animated-icon2 span:nth-child(1) {
+    top: 0px;
+    }
+    
+    .animated-icon2 span:nth-child(2),
+    .animated-icon2 span:nth-child(3) {
+    top: 10px;
+    }
+    
+    .animated-icon2 span:nth-child(4) {
+    top: 20px;
+    }
+    
+    .animated-icon2.open span:nth-child(1) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+    }
+    
+    .animated-icon2.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    }
+    
+    .animated-icon2.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    }
+    
+    .animated-icon2.open span:nth-child(4) {
+    top: 11px;
+    width: 0%;
+    left: 50%;
+    }
+    
+/* mobile menu end */
+
+
 /* swiper start */
 .carousel-inner-area .swiper {
     width: 100%;
     height: 100%;
-    padding: 15px 0 !important;
+    padding: 15px 0 30px!important;
 }
 
 .swiper {
@@ -376,9 +462,39 @@ h4.tab-title:after {
     cursor: pointer;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-    color: #b64ec3 !important;
+.diagnostic-s, .medicine-s {
+    position: relative;
+    z-index: 1;
+}
+.diagnostic-s:after {
+    position: absolute;
+    background: url(/img/icons/diagnostic.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: scroll;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.15;
+}
+.medicine-s:after {
+    position: absolute;
+    background: url(/img/tab/07.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-attachment: scroll;
+    top: 20px;
+    right: 20px;
+    content: '';
+    width: 85%;
+    height: 85%;
+    z-index: -1;
+    opacity: 0.15;
 }
 
 .theme-btn {
@@ -389,6 +505,52 @@ h4.tab-title:after {
 .theme-btn:hover {
     box-shadow: 0px 1px 10px rgb(182 78 195 / 75%),
         0px 3px 6px rgb(182 78 195 / 85%);
+}
+
+
+.content-box {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    left: auto;
+    right: 50%;
+    text-align: left;
+    transform: translateX(50%);
+}
+
+.swiper-slide .content-slide {width: 100%;height: 100%;}
+
+
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 16px;
+    text-transform: none!important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+}
+.content-box .left-part {
+background: inherit;
+position: relative;
+z-index: 1;
+padding: 20px;
+overflow: hidden;
+border-radius: 5px;
+}
+.content-box .left-part:before {
+content: "";
+position: absolute;
+width: 100%;
+height: 100%;
+background: #ffffffdb;
+z-index: -1;
+left: 0;
+top: 0;
+border-radius: 5px;
+filter: blur(20px);
+box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
 }
 
 /* swiper end */
@@ -505,7 +667,10 @@ section:hover .section-title.center-title h1:after {
 }
 
 .fb-info-area img {
-    filter: drop-shadow(2px 4px 6px #33333345);
+    filter: drop-shadow(2px 4px 6px #33333345);    
+    padding: 20px;
+    border-radius: 6px;
+    background-color: #4267B2;
 }
 
 .arrow-btn:hover svg {
@@ -569,9 +734,23 @@ section:hover .section-title.center-title h1:after {
 }
 
 .info-box:hover .icon-area svg path {
-    fill: #b64ec3;
+    fill: #577ac2;
 }
-
+.address.info-box:hover .icon-area svg path {
+    fill: #e92f35;
+}
+.contact-no.info-box:hover .icon-area svg path {
+    fill: #40ac51;
+}
+.address .contact-title:after {
+    background: #e92f35;
+}
+.contact-no .contact-title:after {
+    background: #40ac51;
+}
+.email-address .contact-title:after {
+    background: #577ac2;
+}
 .info-box .icon-area svg path {
     transition: 250ms;
 }

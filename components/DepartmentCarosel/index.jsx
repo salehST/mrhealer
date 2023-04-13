@@ -13,7 +13,7 @@ const DepartmentCarousel = ({ dept_id, image, dept_name }) => {
           className=" h-36 w-36 drop-shadow-md"
           alt="icon"
         />
-        <h4 className="text-[#B64EC3] text-base md:text-xl font-normal capitalize">
+        <h4 className="text-[#B64EC3] text-base md:text-xl font-normal capitalize h-14 md:h-16">
           {dept_name}
         </h4>
       </div>

@@ -11,13 +11,13 @@ const Contact = () => {
           </h3>
         </div>
         <div className="contact-info grid grid-cols-1 md:grid-cols-3 gap-7">
-          <div className="info-box p-8 bg-white rounded-2xl shadow hover:shadow-lg">
+          <div className="info-box text-center md:text-left address p-8 bg-white rounded-2xl shadow hover:shadow-lg">
             <div className="icon-area mb-6">
               <svg
                 width="78"
                 height="78"
                 viewBox="0 0 78 78"
-                className=" h-24 w-auto"
+                className=" h-24 w-auto mx-auto md:mx-0"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -52,14 +52,14 @@ const Contact = () => {
           </div>
           <a
             href="tel:+8809611677590"
-            className="info-box p-8 bg-white rounded-2xl shadow hover:shadow-lg"
+            className="info-box text-center md:text-left contact-no p-8 bg-white rounded-2xl shadow hover:shadow-lg"
           >
             <div className="icon-area mb-6">
               <svg
                 width="104"
                 height="104"
                 viewBox="0 0 104 104"
-                className=" h-24 w-auto"
+                className=" h-24 w-auto mx-auto md:mx-0"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >
@@ -81,14 +81,14 @@ const Contact = () => {
           </a>
           <a
             href="mailto:info@mrhealerbd.com"
-            className="info-box p-8 bg-white rounded-2xl shadow hover:shadow-lg"
+            className="info-box text-center md:text-left email-address p-8 bg-white rounded-2xl shadow hover:shadow-lg"
           >
             <div className="icon-area mb-6">
               <svg
                 width="113"
                 height="113"
                 viewBox="0 0 113 113"
-                className=" h-24 w-auto"
+                className=" h-24 w-auto mx-auto md:mx-0"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
               >

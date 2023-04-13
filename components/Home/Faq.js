@@ -4,7 +4,7 @@ import React from "react";
 const Faq = () => {
   return (
     <section className="w-full bg-white p-4 md:py-20 faq">
-      <div className="container mx-auto max-w-screen-xl">
+      <div className="container mx-auto max-w-screen-xl overflow-hidden">
         {/* <!-- container start --> */}
         <div
           data-aos="fade-up"

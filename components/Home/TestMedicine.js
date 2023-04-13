@@ -5,16 +5,16 @@ const TestMedicine = () => {
     <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-12 department-carousel strip-top b-strip">
       <div className="container mx-auto max-w-screen-xl">
         {/* <!-- container start --> */}
-        <div className="section-title center-title text-center mb-8">
+        <div className="section-title center-title text-center mt-4 mb-8">
           <h3
             data-aos="fade-up"
-            className="capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto"
+            className="capitalize text-3xl md:text-5xl text-[#2F2F2F] font-bold  mx-auto w-auto"
           >
             Test and Medicine
           </h3>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="info-area rounded-lg bg-white shadow-md hover:shadow-lg transition px-6 py-10">
+          <div className="info-area  diagnostic-s rounded-lg bg-white shadow-md hover:shadow-lg transition px-6 py-10">
             <h4 className="text-[#B64EC3] text-2xl font-medium mb-6">
               Diagnostic and Test
             </h4>
@@ -29,12 +29,15 @@ const TestMedicine = () => {
               </ul>
             </div>
           </div>
-          <div className="info-area rounded-lg bg-white shadow-md hover:shadow-lg transition px-6 py-10">
+          <div className="info-area medicine-s rounded-lg bg-white shadow-md hover:shadow-lg transition px-6 py-10">
             <h4 className="text-[#B64EC3] text-2xl font-medium mb-6">
               Medicine Home Delivery
             </h4>
             <div className="texts-area">
-              <ul className="list-disc list-outside pl-6 space-y-4 text-base text-black">
+            <p className="text-black text-lg pl-6 py-4">
+                  This Feature is coming soon.
+                </p>
+              {/* <ul className="list-disc list-outside pl-6 space-y-4 text-base text-black">
                 <li>
                   Upload the picture of your prescription or search medicine and
                   order online.
@@ -47,7 +50,7 @@ const TestMedicine = () => {
                   Get your medicine delivered at your door within 18 to 48
                   hours.
                 </li>
-              </ul>
+              </ul> */}
             </div>
           </div>
         </div>

@@ -7,20 +7,20 @@ import DoctorInfo from "../../../../components/DoctorInfo";
 import InfoShimmer from "../../../../components/DoctorInfo/InfoShimmer";
 
 const DoctorProfile = () => {
-  // console.log("token "+ process.env.API_TOKEN);
+  // console.log("token "+ process.env.NEXT_PUBLIC_API_KEY);
   
   
+  // const token = process.env.NEXT_PUBLIC_API_KEY;
   const token =
     "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwYXRpZW50X2lkIjoxMTMsIm5hbWUiOiJQaGVuaXgiLCJwaG9uZSI6IjAxNzA3MDc4NjM3IiwiZW1haWwiOiJhYmR1cjEwMTE3QGdtYWlsLmNvbSIsImJpcnRoZGF5IjoiMTk5NS0wNi0xNSIsInNleCI6Im1hbGUiLCJ3ZWlnaHQiOiI2NCIsImJsb29kX2dyb3VwIjoiTygrdmUpIiwiYWRkcmVzcyI6IkRoYWthIiwiYWNjb3VudF9zdGF0dXMiOiJhY3RpdmUiLCJwcm9maWxlX3BpY3R1cmUiOiJwYXRpZW50XzA0Mjc2NjRkOWMzNDA1YWJkODUxMzllZTc2NDQyNzBkLmpwZyIsImRldmljZV90b2tlbiI6ImQ3ZWVlNGNmYWVlMTk3ZmMiLCJmY21fdG9rZW4iOiJjMDd6T0tSWlF6aUJZb2llak4zdkQtOkFQQTkxYkZ2U25DanF1czlTei1UeVFYczBQTEpIR1M2Tjdzczd6M3c1X3JKWndzMU5iODgwTmI5T0NMN0NlUmU5Z200OWZ1cERINjFfUHAyR1BhLXAyZDdGYlN3MVVXQnM0NVhHWWNRQlJUY2I5ZUhSOXpuck5JTkExSkppejV5VXJQRmRWUDNkdWtzIiwiYmFubmVkIjowLCJ1c2VyVHlwZSI6InBhdGllbnQiLCJpYXQiOjE2NzkyMzI2NzUsImV4cCI6MTgzNDc1MjY3NX0.5flWhLIj0pP1bPfGrAKaV6h8NXsQM9siAB0fzJyYtAU";
-  
-  // const token = process.env.API_TOKEN;
+
 
   const axiosInstance = Axios.create({
     headers: {
       Authorization: `Bearer ${token}`,
     },
+    timeout: 1000,
   });
-  console.log(axiosInstance.defaults.headers);
   const router = useRouter();
   const { doc } = router.query;
   const [myData, setData] = useState(null);
@@ -30,46 +30,34 @@ const DoctorProfile = () => {
 
   const apiUrl = typeof window !== "undefined" ? process.env.API_URL : "";
   useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const [res1, res2, res3, res4] = await Promise.all([
+          Axios.get(`${apiUrl}/alternatives/doctor/${doc}/info`),
+          axiosInstance.get(`${apiUrl}/review/doctor/${doc}`),
+          Axios.get(`${apiUrl}/alternatives/${doc}/educations`),
+          Axios.get(`${apiUrl}/alternatives/${doc}/experiences`),
+        ]);
+
+        setData(res1.data);
+        setDataB(res2.data);
+        setDataC(res3.data);
+        setDataD(res4.data);
+      } catch (error) {
+        console.log(error?.response?.data);
+        if (error?.response?.status === 401) {
+          // Handle unauthorized access
+        }
+      }
+    };
+
     if (doc) {
-      axiosInstance
-        .get(`${apiUrl}/profile/doctor/${doc}/info`)
-        .then((res) => {
-          setData(res.data);
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.log(err.data);
-        });
-
-      axiosInstance
-        .get(`${apiUrl}/review/doctor/${doc}`)
-        .then((res) => {
-          setDataB(res.data);
-        })
-        .catch((err) => {
-          console.log(err.data);
-        });
-
-      axiosInstance
-        .get(`${apiUrl}/profile/${doc}/educations`)
-        .then((res) => {
-          setDataC(res.data);
-        })
-        .catch((err) => {
-          console.log(err.data);
-        });
-
-      axiosInstance
-        .get(`${apiUrl}/profile/${doc}/experiences`)
-        .then((res) => {
-          setDataD(res.data);
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.log(err.data);
-        });
+      fetchData();
     }
   }, [doc]);
+
+  console.log(myDataB);
+
   return (
     <>
       <Head>

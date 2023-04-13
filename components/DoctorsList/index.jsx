@@ -41,11 +41,11 @@ const DoctorsList = ({
                 <h3 className="doc-title text-[#2F2F2F] text-xl font-bold">
                   {name}
                 </h3>
-                <h4 className="doc-degree text-[#2F2F2F] text-sm font-normal flex flex-wrap">
+                <h4 className="doc-degree text-[#2F2F2F] text-sm font-normal">
                   {degree}
                 </h4>
               </div>
-              <div className="bottom-part">
+              <div className="bottom-part text-center md:text-left">
                 <h4 className="text-[#2F2F2F] text-sm font-normal md:mb-1">
                   Specialties
                 </h4>

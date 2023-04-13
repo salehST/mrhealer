@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const year = new Date().getFullYear()
   return (
     <>
       <footer className="p-4 md:py-12 bg-white sm:p-6 font-poppins">
@@ -82,11 +83,11 @@ const Footer = () => {
                       Refund Policy
                     </Link>
                   </li>
-                  <li className="mb-4">
+                  {/* <li className="mb-4">
                     <a href="#" className="">
                       Different Packages
                     </a>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <div className="mb-6 md:mb-0">
@@ -106,14 +107,14 @@ const Footer = () => {
                         width={20}
                         className=" h-5 w-5"
                         src="/img/social/facebook.svg"
-                        alt=""
+                        alt="icon"
                       />{" "}
                     </span>
-                    <a href="#" className=" ml-2">
+                    <a href="https://www.facebook.com/MrHealerHS" target="_blank" className=" ml-2">
                       Facebook
                     </a>
                   </li>
-                  <li
+                  {/* <li
                     className="mb-4  flex"
                     data-te-ripple-init
                     data-te-ripple-color="light"
@@ -127,6 +128,22 @@ const Footer = () => {
                     />{" "}
                     <a href="#" className=" ml-2">
                       Twitter
+                    </a>
+                  </li> */}
+                  <li
+                    className="mb-4  flex"
+                    data-te-ripple-init
+                    data-te-ripple-color="light"
+                  >
+                    <Image
+                      height={20}
+                      width={20}
+                      className="blob infinity rounded-full h-5 w-5"
+                      src="/img/social/youtube.svg"
+                      alt=""
+                    />{" "}
+                    <a href="https://www.youtube.com/@mrhealer" target="_blank" className=" ml-2">
+                      YouTube
                     </a>
                   </li>
                   <li
@@ -144,24 +161,8 @@ const Footer = () => {
                         alt=""
                       />
                     </span>{" "}
-                    <a href="#" className=" ml-2">
+                    <a href="https://www.instagram.com/mrhealerhs/" target="_blank" className=" ml-2">
                       Instagram
-                    </a>
-                  </li>
-                  <li
-                    className="mb-4  flex"
-                    data-te-ripple-init
-                    data-te-ripple-color="light"
-                  >
-                    <Image
-                      height={20}
-                      width={20}
-                      className="blob infinity rounded-full h-5 w-5"
-                      src="/img/social/youtube.svg"
-                      alt=""
-                    />{" "}
-                    <a href="#" className=" ml-2">
-                      YouTube
                     </a>
                   </li>
                 </ul>
@@ -203,7 +204,7 @@ const Footer = () => {
           <hr className="mb-4 md:my-10 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-25 dark:opacity-100" />
           <div className="flex items-center justify-center sm:justify-start py-4">
             <span className=" font-normal text-[#2B313B] sm:text-center">
-              © 2023 MrHeal All rights reserved
+              © {year} MrHealerBD All rights reserved
             </span>
           </div>
         </div>

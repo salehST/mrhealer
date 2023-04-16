@@ -57,6 +57,19 @@ const Slider = () => {
       .banner-area .swiper-button-prev {
           color: #c9c9c9!important;
       }
+      .opening-text {
+        position: relative;
+    }
+    
+    .opening-text:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background: var(--primary);
+    }
     
         `
       }
@@ -89,7 +102,7 @@ const Slider = () => {
             <div className="content-box container p-4 lg:p-0 flex items-center justify-between mx-auto max-w-screen-xl">
                 <div  data-aos="fade-in-left" className="left-part w-full  sm:w-4/6 md:w-3/5">
                   <div className="">
-                  <h1 className="text-xs md:text-xl w-full lg:w-48 lg:text-5xl text-primary font-black mb-1 md:mb-4">TREATMENT <span className=" font-light">FOR ALL</span></h1>
+                  <h1 className="opening-text text-xs md:text-xl w-full lg:w-[250px] lg:text-5xl text-primary font-black mb-1 md:mb-4">TREATMENT <span className=" font-light">FOR ALL</span></h1>
                   <p className="text-[10px] md:text-xs lg:text-lg font-normal mb-2 leading-tight md:leading-4">Mr. Healer provides round-the-clock service to medical advice from BMDC Registered Doctors for all users, instant live doctors, sample collection for pathology test, medicine home delivery and even offline chamber booking to ensure your wellbeing !</p>
                   </div>
                   <div className="btn-box flex min-w-max  items-center justify-between gap-4 mt-0 md:mt-6">
@@ -147,9 +160,9 @@ const Slider = () => {
                   </div>
                 </div>
                 <div className="right-part hidden sm:flex items-center justify-end">
-                  <div className="mobile-img flex flex-col h-52 sm:h-72 w-auto md:h-auto md:w-3/4 items-center py-7">
+                  <div className="mobile-img flex flex-col h-52 sm:h-72 w-auto md:h-auto md:w-3/4 items-center ">
                  
-                  <Image priority src="/img/mr-healer-app-icon.svg" width={380} height={440} className="flex app-icon p-6" alt="img" />
+                  <Image priority src="/img/mr-healer-app-icon.svg" width={380} height={440} className="flex app-icon pb-6" alt="img" />
                   <a
                   href="https://play.google.com/store/apps/details?id=com.healer.patient"
                   target="_blank"

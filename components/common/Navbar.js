@@ -32,7 +32,7 @@ const Navbar = () => {
 const [showMenu, setShowMenu] = useState(false);
 
 const handleMenuClick = () => {
-  setShowMenu(!showMenu);
+  setShowMenu(showMenu => !showMenu);
 };
 
 const handleLinkClick = () => {
@@ -70,9 +70,8 @@ const handleLinkClick = () => {
 
 
             <button
-              className="!block border-0 bg-transparent py-2 px-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:!hidden second-button"
+              className="block border-0 bg-transparent py-2 px-2.5 text-neutral-500 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden second-button"
               type="button"
-              data-te-collapse-init
               id="navbarSupportedContent1"
               data-te-target="#navbarSupportedContent1"
               aria-expanded="false"

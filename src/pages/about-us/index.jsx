@@ -9,8 +9,8 @@ const AboutUs = () => {
       <Head>
         <title>About Us</title>
       </Head>
-      <AboutUsInfo />
       <AboutUsMore />
+      <AboutUsInfo />
     </>
   );
 };

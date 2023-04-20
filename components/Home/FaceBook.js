@@ -21,7 +21,7 @@ const FaceBook = () => {
             alt="logo"
           />
           <p className="text-white text-lg md:text-2xl font-normal mb-6 md:mb-10">
-            Check out our health tip posts and many more
+            Check out our health tips posts, videos and many more.
           </p>
           <a
             href="https://www.facebook.com/MrHealerHS"

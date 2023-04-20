@@ -148,12 +148,14 @@ const handleLinkClick = () => {
                 <li className="lg:pr-4 menu-links" data-te-nav-item-ref>
                   <Link
                     scroll={false}
-                    className="text-black capitalize"
-                    href={"/"}
+                    className={
+                      router.pathname == "/for-doctors" ? " active-page" : ""
+                    }
+                    href={"/for-doctors"}
                     data-te-nav-link-ref
                     onClick={handleLinkClick}
                   >
-                    for doctor
+                    for doctors
                   </Link>
                 </li>
                 <li className="lg:pr-0 menu-links" data-te-nav-item-ref>

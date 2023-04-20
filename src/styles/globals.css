@@ -328,7 +328,7 @@ h4.tab-title:after {
     height: 670px;
 }
 
-.tab-content-area:before, #accordion-b .inner-content:before {
+.tab-content-area:before, #accordion-b .inner-content:before, .intro-text-area:before {
     content: "";
     width: 100%;
     height: 300px;
@@ -341,7 +341,9 @@ h4.tab-title:after {
     background-repeat: no-repeat;
     background-size: 60%;
 }
-
+.intro-text-area{
+    position: relative;
+}
 /* tab end */
 /* mobile menu */
 

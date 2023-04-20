@@ -6,10 +6,7 @@ const WhyUs = () => {
   const [isOpen, setOpen] = useState(false);
   return (
     <>
-      <section
-        id="service"
-        className="w-full p-4 pt-10 pb-0 md:pt-20 md:pb-10 bg-pattern"
-      >
+      <section id="service" className="w-full p-4 py-10 md:py-20 bg-pattern">
         <div className="container mx-auto max-w-screen-xl">
           {/* <!-- container start --> */}
           <div data-aos="fade-up" className="section-title mb-8">
@@ -22,7 +19,7 @@ const WhyUs = () => {
             data-aos-delay="400"
             className="flex flex-col md:flex-row gap-6 items-center justify-between"
           >
-            <div className="text-[#2F2F2F] text-base md:text-xl font-normal w-full md:w-1/2">
+            <div className="text-[#2F2F2F] text-base md:text-xl font-normal w-full ">
               <ul className="list-disc list-outside pl-6 space-y-6">
                 <li>Affordable treatment saving time, money and hassle.</li>
                 <li>
@@ -45,7 +42,7 @@ const WhyUs = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex items-center justify-center w-full md:w-1/2">
+            {/* <div className="flex items-center justify-center w-full md:w-1/2">
               <div className="play-btn flex items-center justify-center relative z-[1] ">
                 <button
                   onClick={() => setOpen(true)}
@@ -61,7 +58,7 @@ const WhyUs = () => {
                   />
                 </button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         {/* <!-- container end --> */}

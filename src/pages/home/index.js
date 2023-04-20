@@ -9,11 +9,13 @@ import TestMedicine from "../../../components/Home/TestMedicine";
 import CustomerSupport from "../../../components/Home/CustomerSupport";
 import FaceBook from "../../../components/Home/FaceBook";
 import Faq from "../../../components/Home/Faq";
+import TopInfo from '../../../components/Home/TopInfo';
 
 const LandingPage = () => {
   return (
     <>
         <Slider/>
+        <TopInfo />
         <WhyUs />
         <OfferTab  />
         <Carousel />

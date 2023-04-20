@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
+
+import ModalVideo from "react-modal-video";
+
+
+
 const CustomerSupport = () => {
+  const [supportVideo, setSupportVideo] = useState(false);
+
+  const openVideoModal = () => {
+    setSupportVideo(true);
+  };
   return (
     <section className="w-full bg-white overflow-hidden p-4 pt-0 pb-0 md:pt-10 md:pb-10 support-section  relative">
       <div className="container mx-auto max-w-screen-xl">
@@ -1093,8 +1103,8 @@ const CustomerSupport = () => {
             >
               <div className="flex items-start justify-center w-full">
                 <div className="play-btn flex items-center justify-center relative z-[1]">
-                  <a
-                    href=""
+                  <button type="button"
+                    onClick={openVideoModal}
                     className="underline text-black hover:text-gray-900 transition-colors  flex items-center justify-center"
                   >
                     Watch The Video{" "}
@@ -1105,13 +1115,20 @@ const CustomerSupport = () => {
                       className=" ml-4"
                       alt="icon"
                     />
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <ModalVideo
+        channel="youtube"
+        isOpen={supportVideo}
+        videoId="_nNsOd7rREo"
+        autoplay
+        onClose={() => setSupportVideo(false)}
+      />
     </section>
   );
 };

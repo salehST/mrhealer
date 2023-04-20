@@ -4,14 +4,10 @@ import Tilt from "react-parallax-tilt";
 
 const AboutUsInfo = () => {
   return (
-    <section className="w-full px-4 pt-6 pb-6 md:pt-28 md:pb-8 mission-vision bg-pattern ">
+    <section className="w-full px-4 pt-6 pb-6 md:pt-12 md:pb-12 mission-vision bg-pattern ">
       <div className="container mx-auto max-w-screen-xl">
         {/* <!-- container start --> */}
-        <div className="section-title center-title text-center mb-8">
-          <h1 className="capitalize text-4xl md:text-5xl text-[#2F2F2F] font-bold   mx-auto w-auto">
-            About Us
-          </h1>
-        </div>
+        
         <div className="mission-vision-area flex flex-col md:flex-row items-stretch justify-between gap-8 mx-auto  pt-6 mb-8">
           <Tilt
             tiltAxis={"y"}

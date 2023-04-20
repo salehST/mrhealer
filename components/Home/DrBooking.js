@@ -49,7 +49,7 @@ function DrBooking() {
                 />
               </svg>
             </div>
-            <div className="wrapper-inner p-4 pt-20">
+            <div className="wrapper-inner p-4 pt-20 relative z-10">
               <div className="top-part flex justify-between gap-3 mb-6">
                 <svg
                   width="60"
@@ -64,7 +64,7 @@ function DrBooking() {
                   />
                 </svg>
                 <h5 className="text-[#B64EC3] text-2xl font-medium">
-                  Online Doctor Booking Procedure
+                  Normal Booking Procedure
                 </h5>
               </div>
               <div className="texts-area">
@@ -88,7 +88,21 @@ function DrBooking() {
                   </li>
                 </ul>
               </div>
-             
+              <div className="mt-4  pl-6 play-btn flex items-center justify-start relative z-[1] ">
+                <button
+                  onClick={openModal2}
+                  className="underline text-primary text-lg hover:text-black transition-colors  flex items-center justify-center"
+                >
+                  Watch The Video{" "}
+                  <Image
+                    width={110}
+                    height={110}
+                    className="ml-4 h-12 w-12"
+                    src="/img/play-btn.svg"
+                    alt="icon"
+                  />
+                </button>
+              </div>
             </div>
           </div>
           <div
@@ -114,7 +128,7 @@ function DrBooking() {
                 />
               </svg>
             </div>
-            <div className="wrapper-inner p-4 pt-20">
+            <div className="wrapper-inner p-4 pt-20 relative z-10">
               <div className="top-part flex justify-between gap-3 mb-6">
                 <svg
                   width="60"
@@ -132,7 +146,7 @@ function DrBooking() {
                 </svg>
 
                 <h5 className="text-[#B64EC3] text-2xl font-medium">
-                  Live Doctor Booking Procedure
+                  Instant Booking Procedure
                 </h5>
               </div>
               <div className="texts-area">
@@ -153,7 +167,7 @@ function DrBooking() {
               </div>
               <div className="mt-4  pl-6 play-btn flex items-center justify-start relative z-[1] ">
                 <button
-                  onClick={openModal2}
+                  onClick={openModal3}
                   className="underline text-primary text-lg hover:text-black transition-colors  flex items-center justify-center"
                 >
                   Watch The Video{" "}
@@ -184,7 +198,7 @@ function DrBooking() {
           </svg>
 
             </div>
-            <div className="wrapper-inner p-4 pt-20">
+            <div className="wrapper-inner p-4 pt-20 relative z-10">
               <div className="top-part flex justify-between gap-3 mb-6">
               <svg width="60" height="60" viewBox="0 0 16 16" 
                 xmlns="http://www.w3.org/2000/svg">
@@ -198,8 +212,8 @@ function DrBooking() {
                 </h5>
               </div>
               <div className="texts-area">
-             
-                <ul className="list-disc list-outside pl-6 space-y-4 text-base text-black">
+                <p className="text-base text-black mb-3 pl-6">This Feature is Coming Soon.</p>
+                {/* <ul className="list-disc list-outside pl-6 space-y-4 text-base text-black">
                   <li>
                     Search for a doctor (available for offline) based on your
                     symptoms, their specialization, their doctor profile, or
@@ -212,8 +226,8 @@ function DrBooking() {
                   <li>
                     Reach the doctor’s chamber on the scheduled date on time.
                   </li>
-                </ul>
-                <div className="mt-4  pl-6 play-btn flex items-center justify-start relative z-[1] ">
+                </ul> */}
+                {/* <div className="mt-4  pl-6 play-btn flex items-center justify-start relative z-[1] ">
                 <button
                    onClick={openModal3}
                   className="underline text-primary text-lg hover:text-black transition-colors  flex items-center justify-center"
@@ -227,23 +241,24 @@ function DrBooking() {
                     alt="icon"
                   />
                 </button>
-              </div>
+              </div> */}
               </div>
             </div>
           </div>
         </div>
       </div>
+
       <ModalVideo
         channel="youtube"
         isOpen={isOpen2}
-        videoId="JqzavEY9FxI"
+        videoId="yzwhJQRSLV8"
         autoplay
         onClose={() => setOpen2(false)}
       />
       <ModalVideo
         channel="youtube"
         isOpen={isOpen3}
-        videoId="nXQDVzy_XbI"
+        videoId="xFJXX7VfZm4"
         autoplay
         onClose={() => setOpen3(false)}
       />

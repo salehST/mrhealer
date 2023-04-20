@@ -40,7 +40,6 @@ export default function Home() {
           <LandingPage />
       </main>
 
-      <script src={"/js/main.js"} defer ></script>
     </>
   );
 }

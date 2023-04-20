@@ -194,7 +194,7 @@ const Faq = () => {
               data-te-parent="#accordion"
             >
               <div className="py-4 px-5 border border-[#efefef] shadow-md mb-3 rounded-md text-[#2F2F2F] leading-7">
-                To schedule an appointment, check out the Doctor Booking segment
+                To schedule an appointment, check out the Get A Doctor segment
                 of the website.
               </div>
             </div>
